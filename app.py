@@ -103,6 +103,53 @@ def history721():
 def history8():
     return render_template("untitled-8.html")
 
+@app.route('/history81')
+def history81():
+    return render_template("untitled-8-1.html")
+
+@app.route('/history91')
+def history91():
+    return render_template("untitled-9-1.html")
+
+@app.route('/history93')
+def history93():
+    return render_template("untitled-9-3.html")
+
+@app.route('/history94')
+def history94():
+    return render_template("untitled-9-4.html")
+
+@app.route('/history942')
+def history942():
+    return render_template("untitled-9-4-2.html")
+
+@app.route('/history9421')
+def history9421():
+    return render_template("untitled-9-4-2-1.html")
+
+@app.route('/history94211')
+def history94211():
+    return render_template("untitled-9-4-2-1-1.html")
+
+@app.route('/history943')
+def history943():
+    return render_template("untitled-9-4-3.html")
+
+@app.route('/history944')
+def history944():
+    return render_template("untitled-9-4-4.html")
+
+@app.route('/history945')
+def history945():
+    return render_template("untitled-9-4-5.html")
+
+@app.route('/history10')
+def history10():
+    return render_template("untitled-10.html")
+
+
+
+
 
 
 
