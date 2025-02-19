@@ -51,6 +51,16 @@ def history11():
 def history2():
     return render_template("untitled-2.html")
 
+@app.route('/history3')
+def history3():
+    return render_template("untitled-3.html")
+
+@app.route('/history4')
+def history4():
+    return render_template("untitled-4.html")
+
+
+
 
 
 if __name__ == '__main__':
