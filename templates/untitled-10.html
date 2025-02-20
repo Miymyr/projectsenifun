@@ -19,28 +19,27 @@
 </head>
 
 <body style="background: rgb(87,0,0);">
-    <nav class="navbar navbar-expand-md sticky-top py-3 navbar-dark" id="mainNav" style="background: #570000;">
-        <div class="container"><a class="navbar-brand d-flex align-items-center" href="/"><span>Senifun</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div class="container py-4 py-lg-5 ps-5" style="position: absolute;padding-bottom: initial;text-align: center;width: 100vw;">
-                <hr>
+    <header class="bg-dark" style="background: #654633;--bs-dark: #fcf9f9;--bs-dark-rgb: 255, 253, 242;">
+        <nav class="navbar navbar-expand-md sticky-top py-3 navbar-dark" id="mainNav" style="background: #570000;">
+            <div class="container"><a class="navbar-brand d-flex align-items-center" href="{{ url_for('mane') }}"><span>Senifun</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"></li>
+                        <li class="nav-item"></li>
+                        <li class="nav-item"></li>
+                        <li class="nav-item"></li>
+                        <li class="nav-item"></li>
+                    </ul><a class="btn btn-primary shadow" role="button" href="{{ url_for('about') }}" style="background: #570000;--bs-primary: #0c0c0c;--bs-primary-rgb: 12,12,12;border-radius: 36px;border-width: 0;">О нас</a>
+                </div>
             </div>
-            <div class="collapse navbar-collapse" id="navcol-1">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"></li>
-                    <li class="nav-item"></li>
-                    <li class="nav-item"></li>
-                    <li class="nav-item"></li>
-                    <li class="nav-item"></li>
-                </ul><a class="btn btn-primary shadow" role="button" href="signup.html" style="background: #570000;--bs-primary: #0c0c0c;--bs-primary-rgb: 12,12,12;border-radius: 36px;border-width: 0;">О нас</a>
-            </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
     <div style="background: #fffdf2;">
         <div class="container py-4 py-xl-5" style="background: #fffdf2;">
             <div class="row mb-5">
                 <div class="col-md-8 col-xl-6 text-center mx-auto">
                     <h2 style="height: 45px;" class="mb-0"><strong><span style="color: rgb(0, 0, 0);">История пройдена</span></strong></h2>
-                    <div class="card-img-overlay text-center d-flex flex-column justify-content-center align-items-center p-4" style="position: relative;height: 500px;"><small style="font-size: 20px;text-align: justify;height: 420px;" class="pb-4 mb-2"><strong><span style="color: rgb(0, 0, 0); background-color: rgba(255, 253, 242, 0);">Стресс из-за учебы — это естественная реакция, с которой можно и нужно работать. Важно находить баланс между учебой и отдыхом, использовать техники управления временем и стрессом, а также не бояться обращаться за поддержкой к друзьям, семье или специалистам. Поддержка и понимание окружающих, а также вера в свои силы помогают преодолеть трудности и добиться успеха. Спасибо за внимание!</span></strong></small><button class="btn btn-primary" type="button" style="background: rgb(6,160,178);height: 60px;">На главную страницу</button></div>
+                    <div class="card-img-overlay text-center d-flex flex-column justify-content-center align-items-center p-4" style="position: relative;height: 500px;"><small style="font-size: 20px;text-align: justify;height: 420px;" class="pb-4 mb-2"><strong><span style="color: rgb(0, 0, 0); background-color: rgba(255, 253, 242, 0);">Стресс из-за учебы — это естественная реакция, с которой можно и нужно работать. Важно находить баланс между учебой и отдыхом, использовать техники управления временем и стрессом, а также не бояться обращаться за поддержкой к друзьям, семье или специалистам. Поддержка и понимание окружающих, а также вера в свои силы помогают преодолеть трудности и добиться успеха. Спасибо за внимание!</span></strong></small><button class="btn btn-primary" type="button" onclick='location.href=&quot;{{ url_for("mane") }}&quot;' style="background: rgb(6,160,178);height: 60px;">На главную страницу</button></div>
                 </div>
             </div>
         </div>
@@ -58,7 +57,7 @@
         <div class="container py-4 py-lg-5" style="position: relative;padding-left: 6.5%;padding-right: 6.5%;margin: auto;background: #570000;max-width: none;width: 100%;">
             <hr>
             <div class="text-muted d-flex flex-column-reverse justify-content-between align-items-center pt-3 ms-0 ps-0" style="height: inherit;">
-                <p class="mb-0">Copyright © 2025 Senifun</p><small>О нас</small><small>Back to top</small>
+                <p class="mb-0">Copyright © 2025 Senifun</p><small onclick='location.href=&quot;{{ url_for("about") }}&quot;' >О нас</small> <small onclick="window.scrollTo(0, 0)"> Back to top</small>
                 <ul class="list-inline mb-0">
                     <li class="list-inline-item"></li>
                 </ul>

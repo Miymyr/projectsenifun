@@ -106,6 +106,10 @@ def history8():
 def history81():
     return render_template("untitled-8-1.html")
 
+@app.route('/history9')
+def history9():
+    return render_template("untitled-9.html")
+
 @app.route('/history91')
 def history91():
     return render_template("untitled-9-1.html")
