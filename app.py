@@ -150,7 +150,10 @@ def history945():
 def history10():
     return render_template("untitled-10.html")
 
-
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory('static', 'favicon.ico',
+                               mimetype='image/vnd.microsoft.icon')
 
 
 
