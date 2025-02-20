@@ -7,7 +7,6 @@ app = Flask(__name__)
 
 @app.route('/')
 def mane():
-    a = "test"
 
     return render_template("Главная.html")
 
@@ -28,7 +27,6 @@ def advice1():
 
 @app.route('/advice/2')
 def advice2():
-
     return render_template("советы-1-1.html")
 
 @app.route('/advice/3')
@@ -48,6 +46,7 @@ def history11():
     return render_template("untitled-1-1.html")
 
 @app.route('/history2')
+
 def history2():
     return render_template("untitled-2.html")
 

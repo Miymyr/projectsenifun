@@ -22,10 +22,7 @@
 <body style="background: rgb(87,0,0);">
     <header class="bg-dark" style="background: #654633;--bs-dark: #fcf9f9;--bs-dark-rgb: 255, 253, 242;">
         <nav class="navbar navbar-expand-md sticky-top py-3 navbar-dark" id="mainNav" style="background: #570000;">
-            <div class="container"><a class="navbar-brand d-flex align-items-center" href="/"><span>Senifun</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-                <div class="container py-4 py-lg-5 ps-5" style="position: absolute;padding-bottom: initial;text-align: center;width: 100vw;">
-                    <hr>
-                </div>
+            <div class="container"><a class="navbar-brand d-flex align-items-center" href="{{ url_for('mane') }}"><span>Senifun</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navcol-1">
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item"></li>
@@ -33,7 +30,7 @@
                         <li class="nav-item"></li>
                         <li class="nav-item"></li>
                         <li class="nav-item"></li>
-                    </ul><a class="btn btn-primary shadow" role="button" href="signup.html" style="background: #570000;--bs-primary: #0c0c0c;--bs-primary-rgb: 12,12,12;border-radius: 36px;border-width: 0;">О нас</a>
+                    </ul><a class="btn btn-primary shadow" role="button" href="{{ url_for('about') }}" style="background: #570000;--bs-primary: #0c0c0c;--bs-primary-rgb: 12,12,12;border-radius: 36px;border-width: 0;">О нас</a>
                 </div>
             </div>
         </nav>
@@ -74,7 +71,7 @@
                         <div class="card bg-primary-light">
                             <div class="card-body text-center px-4 py-5 px-md-5" style="background: #ede6d6;border-bottom-left-radius: 20px;border-top-left-radius: 20px;border-top-right-radius: 20px;border-bottom-right-radius: 20px;--bs-primary: #ffffff;--bs-primary-rgb: 255,255,255;--bs-info: #ffffff;--bs-info-rgb: 255,255,255;border-style: none;border-color: var(--bs-body-color);backdrop-filter: blur(100px) brightness(200%) grayscale(100%) hue-rotate(360deg) saturate(0%);-webkit-backdrop-filter: blur(100px) brightness(200%) grayscale(100%) hue-rotate(360deg) saturate(0%);">
                                 <h5 class="fw-bold card-title mb-3" style="color: rgb(0,0,0);font-weight: bold;">Стресс из-за учебы</h5>
-                                <p class="fw-bold text-primary card-text mb-2" style="text-align: center;color: #ede6d6;border-color: #a89382;"><span style="color: rgb(168, 147, 130);">Игра предлагает погрузиться в историю, где главный герой сталкивается с различными препятствиями, связанными с учебой</span></p><button class="btn btn-primary btn-sm" type="button" style="background: #a89382;--bs-primary: #ffffff;--bs-primary-rgb: 255,255,255;border-style: none;">Перейти</button>
+                                <p class="fw-bold text-primary card-text mb-2" style="text-align: center;color: #ede6d6;border-color: #a89382;"><span style="color: rgb(168, 147, 130);">Игра предлагает погрузиться в историю, где главный герой сталкивается с различными препятствиями, связанными с учебой</span></p><button class="btn btn-primary btn-sm" type="button" onclick='location.href=&quot;{{ url_for("history") }}&quot;'style="background: #a89382;--bs-primary: #ffffff;--bs-primary-rgb: 255,255,255;border-style: none;">Перейти</button>
                             </div>
                         </div>
                     </div>
@@ -94,7 +91,7 @@
                 <div class="col-md-6 text-center text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center">
                     <div style="max-width: 350px;">
                         <h2 class="text-uppercase fw-bold" style="color: rgb(14,14,14);">Полезные статьи</h2>
-                        <p class="my-3" style="color: rgb(23,22,22);font-weight: bold;">Сборник матриалов с советами</p><a class="btn btn-primary btn-lg me-2" role="button" href="#" style="background: #b2d8dc;--bs-primary: rgba(55,99,244,0);--bs-primary-rgb: 55,99,244;backdrop-filter: opacity(1);-webkit-backdrop-filter: opacity(1);border-width: 0px;">Перейти</a>
+                        <p class="my-3" style="color: rgb(23,22,22);font-weight: bold;">Сборник матриалов с советами</p><a class="btn btn-primary btn-lg me-2" role="button" onclick='location.href=&quot;{{ url_for("advice") }}&quot;' href="#" style="background: #b2d8dc;--bs-primary: rgba(55,99,244,0);--bs-primary-rgb: 55,99,244;backdrop-filter: opacity(1);-webkit-backdrop-filter: opacity(1);border-width: 0px;">Перейти</a>
                     </div>
                 </div>
                 <div class="col-md-6">
