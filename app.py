@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route('/')
 def mane():
 
-    return render_template("Главная.html")
+    return render_template("Главная1.html")
 
 @app.route('/about')
 def about():
@@ -35,7 +35,7 @@ def advice3():
 
 @app.route('/history')
 def history():
-    return render_template("untitled.html")
+    return render_template("untitled-1010.html")
 
 @app.route('/history1')
 def history1():
@@ -116,7 +116,7 @@ def history91():
 
 @app.route('/history93')
 def history93():
-    return render_template("untitled-9-3.html")
+    return render_template("untitled-9-35.html")
 
 @app.route('/history94')
 def history94():
@@ -148,7 +148,7 @@ def history945():
 
 @app.route('/history10')
 def history10():
-    return render_template("untitled-10.html")
+    return render_template("untitled-10-1.html")
 
 @app.route('/favicon.ico')
 def favicon():
