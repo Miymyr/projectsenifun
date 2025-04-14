@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Home - Brand</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/swiper-icons.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/dh-header-cover-image-button.css') }}">
@@ -17,12 +18,13 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/Simple-Cover.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/Simple-Slider-swiper-bundle.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/Simple-Slider.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/buttons.css') }}">
 </head>
 
 <body style="background: rgb(87,0,0);">
     <header class="bg-dark" style="background: #654633;--bs-dark: #fcf9f9;--bs-dark-rgb: 255, 253, 242;">
         <nav class="navbar navbar-expand-md sticky-top py-3 navbar-dark" id="mainNav" style="background: #570000;">
-            <div class="container"><a class="navbar-brand d-flex align-items-center" href="{{ url_for('mane') }}"><span>Senifun</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="container"><a class="navbar-brand d-flex align-items-center hoverButton" href="{{ url_for('mane') }}"><span>Senifun</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navcol-1">
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item"></li>
@@ -30,7 +32,7 @@
                         <li class="nav-item"></li>
                         <li class="nav-item"></li>
                         <li class="nav-item"></li>
-                    </ul><a class="btn btn-primary shadow" role="button" href="{{ url_for('about') }}" style="background: #570000;--bs-primary: #0c0c0c;--bs-primary-rgb: 12,12,12;border-radius: 36px;border-width: 0;">О нас</a>
+                    </ul><a class="btn btn-primary shadow hoverButton" role="button" href="{{ url_for('about') }}" style="background: #570000;--bs-primary: #0c0c0c;--bs-primary-rgb: 12,12,12;border-radius: 36px;border-width: 0;">О нас</a>
                 </div>
             </div>
         </nav>
@@ -40,6 +42,9 @@
             <div style="font-size: 14px;"><small class="pt-0" style="width: 30px;font-weight: bold;font-size: 16px;font-family: Inter, sans-serif;">МЫ ПОМОЖЕМ ПОДРОСТКАМ РАЗОБРАТЬСЯ В СЕБЕ</small>
                 <h1 class="text-center mt-3" style="color: #ffffff;font-size: 54px;font-weight: bold;font-family: Inter, sans-serif;">SENIFUN</h1>
                 <p style="font-family: Inter, sans-serif;font-size: 22px;font-weight: bold;margin-right: 30px;margin-left: 30px;">Современные подростки встречаются с разнообразными вызовами и переменами в социуме. Это может содействовать возникновению различных психологических сложностей. Наш проект направлен на психологическую поддержку подростков<br><br></p>
+                <button class="btn btn-outline-light rounded-circle d-flex align-items-center justify-content-center mx-auto mt-4" style="width: 50px; height: 50px; border-width: 2px; box-shadow: 0 3px 10px rgba(0,0,0,0.2); transition: all 0.3s ease; padding: 0;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.2)'" onmouseout="this.style.backgroundColor='transparent'" onclick="document.querySelector('.container.pt-4.pt-xl-5').scrollIntoView({behavior: 'smooth', block: 'start'})">
+                    <i class="fa fa-chevron-down" style="color: white; font-size: 18px;"></i>
+                </button>
             </div>
             <div class="simple-slider">
                 <div class="swiper-container">
@@ -71,7 +76,7 @@
                         <div class="card bg-primary-light">
                             <div class="card-body text-center px-4 py-5 px-md-5" style="background: #ede6d6;border-bottom-left-radius: 20px;border-top-left-radius: 20px;border-top-right-radius: 20px;border-bottom-right-radius: 20px;--bs-primary: #ffffff;--bs-primary-rgb: 255,255,255;--bs-info: #ffffff;--bs-info-rgb: 255,255,255;border-style: none;border-color: var(--bs-body-color);backdrop-filter: blur(100px) brightness(200%) grayscale(100%) hue-rotate(360deg) saturate(0%);-webkit-backdrop-filter: blur(100px) brightness(200%) grayscale(100%) hue-rotate(360deg) saturate(0%);">
                                 <h5 class="fw-bold card-title mb-3" style="color: rgb(0,0,0);font-weight: bold;font-family: Inter, sans-serif;">Стресс из-за учебы</h5>
-                                <p class="fw-bold text-primary card-text mb-2" style="text-align: center;color: #ede6d6;border-color: #a89382;font-family: Inter, sans-serif;"><span style="color: rgb(168, 147, 130);">Игра предлагает погрузиться в историю, где главный герой сталкивается с различными препятствиями, связанными с учебой</span></p><button class="btn btn-primary btn-sm" type="button" onclick='location.href=&quot;{{ url_for("history") }}&quot;' style="background: #a89382;--bs-primary: #ffffff;--bs-primary-rgb: 255,255,255;border-style: none;">Перейти</button>
+                                <p class="fw-bold text-primary card-text mb-2" style="text-align: center;color: #ede6d6;border-color: #a89382;font-family: Inter, sans-serif;"><span style="color: rgb(168, 147, 130);">Игра предлагает погрузиться в историю, где главный герой сталкивается с различными препятствиями, связанными с учебой</span></p><button class="btn btn-primary btn-sm hoverButtontry "  type="button" onclick='location.href=&quot;{{ url_for("history") }}&quot;' style="background: #a89382;--bs-primary: #ffffff;--bs-primary-rgb: 255,255,255;border-style: none;">Перейти</button>
                             </div>
                         </div>
                     </div>
