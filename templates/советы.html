@@ -1,108 +1,305 @@
 <!DOCTYPE html>
-<html data-bs-theme="light" lang="en">
-
+<html lang="ru">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Pricing - Brand</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/swiper-icons.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/dh-header-cover-image-button.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/Features-Small-Icons-icons.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/Hero-Clean-Reverse-images.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/Lightbox-Gallery-No-Gutters-baguetteBox.min.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/Simple-Cover-cover.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/Simple-Cover.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/Simple-Slider-swiper-bundle.min.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/Simple-Slider.css') }}">
-    <link rel="icon" type="image/png" href="/static/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/static/favicon.svg" />
-    <link rel="shortcut icon" href="/static/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="Senifun" />
-    <link rel="manifest" href="/static/site.webmanifest" />
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Полезные статьи - Senifun</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        :root {
+            --primary: #800000;
+            --secondary: #F5F5DC;
+            --accent: #0FAFBC;
+            --text-dark: #333333;
+            --text-light: #F5F5DC;
+        }
 
-<body style="background: rgb(87,0,0);">
-    <header class="bg-dark" style="background: #654633;--bs-dark: #fcf9f9;--bs-dark-rgb: 255, 253, 242;">
-        <nav class="navbar navbar-expand-md sticky-top py-3 navbar-dark" id="mainNav" style="background: #570000;">
-            <div class="container"><a class="navbar-brand d-flex align-items-center" href="{{ url_for('mane') }}"><span>Senifun</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navcol-1">
-                    <ul class="navbar-nav mx-auto">
-                        <li class="nav-item"></li>
-                        <li class="nav-item"></li>
-                        <li class="nav-item"></li>
-                        <li class="nav-item"></li>
-                        <li class="nav-item"></li>
-                    </ul><a class="btn btn-primary shadow" role="button" href="{{ url_for('about') }}" style="background: #570000;--bs-primary: #0c0c0c;--bs-primary-rgb: 12,12,12;border-radius: 36px;border-width: 0;">О нас</a>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div style="background: #fffdf2;">
-        <div class="container py-4 py-xl-5" style="background: #fffdf2;">
-            <div class="row mb-5">
-                <div class="col-md-8 col-xl-6 text-center mx-auto">
-                    <h2><strong><span style="color: rgb(0, 0, 0);">Полезные статьи</span></strong></h2>
-                    <p class="w-lg-50" style="color: rgb(6,160,178);"><strong>Советы и рекомендации для подростков</strong></p>
-                </div>
-            </div>
-            <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
-                <div class="col">
-                    <div class="d-flex">
-                        <div class="px-3">
-                            <h4 style="color: rgb(0,0,0);font-weight: bold;"><strong>Стресс из-за учебы</strong></h4>
-                            <p style="color: rgb(0,0,0);font-weight: bold;">Советы, которые помогут справиться со стрессом из-за учебы&nbsp;</p><a href="{{ url_for('advice1') }}" style="color: rgb(6,160,178);">Перейти&nbsp;</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="d-flex">
-                        <div class="px-3">
-                            <h4 style="color: rgb(0,0,0);font-weight: bold;">Проблемы в отношениях</h4>
-                            <p style="font-weight: bold;color: rgb(0,0,0);">Наиболее распространенные проблемы и как их преодолеть&nbsp;</p><a href="{{ url_for('advice2') }}" style="color: rgb(6,160,178);">Перейти&nbsp;</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="d-flex">
-                        <div class="px-3">
-                            <h4 style="color: rgb(0,0,0);font-weight: bold;">Самооценка</h4>
-                            <p style="color: rgb(0,0,0);font-weight: bold;">Советы, которые помогут повысить самооценку и стать увереннее в себе&nbsp;</p><a href="{{ url_for('advice3') }}" style="color: rgb(6,160,178);">Перейти</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container py-4 py-lg-5 ps-5" style="position: absolute;padding-bottom: initial;">
-        <hr>
-        <div class="text-muted d-flex flex-column-reverse justify-content-between align-items-center pt-3 ms-0 ps-0">
-            <p class="mb-0">Copyright © 2025 Senifun</p><small>О нас</small><small>Back to top</small>
-            <ul class="list-inline mb-0">
-                <li class="list-inline-item"></li>
-            </ul>
-        </div>
-    </div>
-    <footer class="bg-dark" style="width: 100%;text-align: center;max-width: inherit;">
-        <div class="container py-4 py-lg-5" style="position: relative;padding-left: 6.5%;padding-right: 6.5%;margin: auto;background: #570000;max-width: none;width: 100%;">
-            <hr>
-            <div class="text-muted d-flex flex-column-reverse justify-content-between align-items-center pt-3 ms-0 ps-0" style="height: inherit;">
-                <p class="mb-0">Copyright © 2025 Senifun</p><small onclick='location.href=&quot;{{ url_for("about") }}&quot;' >О нас</small> <small onclick="window.scrollTo(0, 0)"> Back to top</small>
-                <ul class="list-inline mb-0">
-                    <li class="list-inline-item"></li>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--secondary);
+            color: var(--text-dark);
+        }
+
+        .navbar {
+            background-color: var(--primary);
+        }
+
+        .navbar-brand, .nav-link {
+            color: var(--text-light) !important;
+        }
+
+        .page-header {
+            background-color: var(--secondary);
+            padding: 3rem 0 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .page-header::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+
+        .article-card {
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            height: 100%;
+            border: none;
+            background-color: white;
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .article-card .card-body {
+            padding: 1.5rem;
+        }
+
+        .article-card .card-title {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .article-card .card-text {
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .article-card .btn {
+            background-color: var(--accent);
+            border: none;
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            transition: background-color 0.3s;
+        }
+
+        .article-card .btn:hover {
+            background-color: #0D8F9E;
+        }
+
+        .article-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .category-title {
+            color: var(--accent);
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            background-color: var(--primary);
+            color: var(--text-light);
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+
+        .footer-link {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-link:hover {
+            color: var(--accent);
+        }
+
+        .copyright {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .article-img {
+            max-height: 160px;
+            object-fit: cover;
+        }
+
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--primary);
+        }
+
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50%;
+            height: 3px;
+            background-color: var(--accent);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Senifun</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Игры</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Статьи</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">О нас</a>
+                    </li>
                 </ul>
             </div>
         </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="{{ url_for('static', filename='js/bs-init.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/bold-and-dark.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/Lightbox-Gallery-No-Gutters-baguetteBox.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/Lightbox-Gallery-No-Gutters-Lightbox-Gallery.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/Simple-Slider-swiper-bundle.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/Simple-Slider.js') }}"></script>
-</body>
+    </nav>
 
+    <!-- Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1 class="display-4 fw-bold animate__animated animate__fadeIn">Полезные статьи</h1>
+            <p class="lead animate__animated animate__fadeIn animate__delay-1s">Советы и рекомендации для подростков</p>
+        </div>
+    </header>
+
+    <!-- Articles Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Article 1 -->
+                <div class="col-md-6 col-lg-4 animate__animated animate__fadeInUp">
+                    <div class="article-card card h-100">
+                        <img src="{{ url_for('static', filename='img/law-bg.jpg')  }}" alt="Стресс из-за учебы" class="article-img">
+                        <div class="card-body d-flex flex-column">
+                            <p class="category-title mb-0">Психология</p>
+                            <h3 class="card-title">Стресс из-за учебы</h3>
+                            <p class="card-text">Советы, которые помогут справиться со стрессом из-за учебы и найти баланс между обучением и отдыхом.</p>
+                            <a href="#" class="btn mt-auto">Перейти</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 2 -->
+                <div class="col-md-6 col-lg-4 animate__animated animate__fadeInUp animate__delay-1s">
+                    <div class="article-card card h-100">
+                        <img src="{{ url_for('static', filename='img/law-bg.jpg')  }}" alt="Проблемы в отношениях" class="article-img">
+                        <div class="card-body d-flex flex-column">
+                            <p class="category-title mb-0">Общение</p>
+                            <h3 class="card-title">Проблемы в отношениях</h3>
+                            <p class="card-text">Наиболее распространенные проблемы в отношениях с другими людьми и способы их преодоления.</p>
+                            <a href="#" class="btn mt-auto">Перейти</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 3 -->
+                <div class="col-md-6 col-lg-4 animate__animated animate__fadeInUp animate__delay-2s">
+                    <div class="article-card card h-100">
+                        <img src="{{ url_for('static', filename='img/law-bg.jpg')  }}" alt="Самооценка" class="article-img">
+                        <div class="card-body d-flex flex-column">
+                            <p class="category-title mb-0">Личностный рост</p>
+                            <h3 class="card-title">Самооценка</h3>
+                            <p class="card-text">Советы, которые помогут повысить самооценку и стать увереннее в себе, принимая свои сильные и слабые стороны.</p>
+                            <a href="#" class="btn mt-auto">Перейти</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 4 -->
+                <div class="col-md-6 col-lg-4 animate__animated animate__fadeInUp">
+                    <div class="article-card card h-100">
+                        <img src="{{ url_for('static', filename='img/law-bg.jpg')  }}" alt="Управление временем" class="article-img">
+                        <div class="card-body d-flex flex-column">
+                            <p class="category-title mb-0">Продуктивность</p>
+                            <h3 class="card-title">Управление временем</h3>
+                            <p class="card-text">Эффективные способы планирования и организации своего времени для учебы и отдыха.</p>
+                            <a href="#" class="btn mt-auto">Перейти</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 5 -->
+                <div class="col-md-6 col-lg-4 animate__animated animate__fadeInUp animate__delay-1s">
+                    <div class="article-card card h-100">
+                        <img src="{{ url_for('static', filename='img/law-bg.jpg')  }}" alt="Преодоление тревоги" class="article-img">
+                        <div class="card-body d-flex flex-column">
+                            <p class="category-title mb-0">Психология</p>
+                            <h3 class="card-title">Преодоление тревоги</h3>
+                            <p class="card-text">Методы и техники, помогающие справиться с тревожными мыслями и чувством беспокойства.</p>
+                            <a href="#" class="btn mt-auto">Перейти</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 6 -->
+                <div class="col-md-6 col-lg-4 animate__animated animate__fadeInUp animate__delay-2s">
+                    <div class="article-card card h-100">
+                        <img src="{{ url_for('static', filename='img/law-bg.jpg') }}" alt="Здоровые привычки" class="article-img">
+                        <div class="card-body d-flex flex-column">
+                            <p class="category-title mb-0">Здоровье</p>
+                            <h3 class="card-title">Здоровые привычки</h3>
+                            <p class="card-text">Советы по формированию здоровых привычек, которые помогут чувствовать себя лучше физически и психологически.</p>
+                            <a href="#" class="btn mt-auto">Перейти</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center text-lg-start">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="mb-3">Senifun</h5>
+                    <p>Психологическая поддержка подростков</p>
+                </div>
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="mb-3">Навигация</h5>
+                    <ul class="list-unstyled">
+                        <li><a class="footer-link" href="#">Главная</a></li>
+                        <li><a class="footer-link" href="#">Игры</a></li>
+                        <li><a class="footer-link" href="#">Статьи</a></li>
+                        <li><a class="footer-link" href="#">О нас</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="mb-3">Контакты</h5>
+                    <ul class="list-unstyled">
+                        <li><a class="footer-link" href="mailto:info@senifun.ru">info@senifun.ru</a></li>
+                        <li><a class="footer-link" href="#">Политика конфиденциальности</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            <a class="footer-link" href="#">Back to top</a>
+            <p class="my-2 copyright">Copyright © 2025 Senifun</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
