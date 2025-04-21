@@ -24,17 +24,30 @@
 <body style="background: rgb(87,0,0);">
     <header class="bg-dark" style="background: #654633;--bs-dark: #fcf9f9;--bs-dark-rgb: 255, 253, 242;">
         <nav class="navbar navbar-expand-md sticky-top py-3 navbar-dark" id="mainNav" style="background: #570000;">
-            <div class="container"><a class="navbar-brand d-flex align-items-center hoverButton" href="/" onclick='location.href=&quot;{{ url_for("mane") }}&quot;'><span>Senifun</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center hoverButton" href="/" onclick='location.href=&quot;{{ url_for("mane") }}&quot;'><span>Senifun</span></a>
+                <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1">
+                    <span class="visually-hidden">Toggle navigation</span>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
                 <div class="collapse navbar-collapse" id="navcol-1" style="font-weight: bold;">
-                    <ul class="navbar-nav mx-auto">
-                        <li class="nav-item"></li>
-                    </ul><a class="btn btn-primary shadow hoverButton" role="button" href="{{ url_for('about') }}" style="background: #570000;--bs-primary: #0c0c0c;--bs-primary-rgb: 12,12,12;border-radius: 36px;border-width: 0;font-weight: bold;font-family: Inter, sans-serif;" >О нас</a><a class="btn btn-primary shadow hoverButton" role="button" href="signup.html" style="background: #570000;--bs-primary: #0c0c0c;--bs-primary-rgb: 12,12,12;border-radius: 36px;border-width: 0;font-weight: bold;font-family: Inter, sans-serif;">Истории</a><a class="btn btn-primary shadow hoverButton" role="button" href="signup.html" style="background: #570000;--bs-primary: #0c0c0c;--bs-primary-rgb: 12,12,12;border-radius: 36px;border-width: 0;font-weight: bold;">Статьи</a>
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="btn btn-primary shadow hoverButton" role="button" href="{{ url_for('about') }}" style="background: #570000;--bs-primary: #0c0c0c;--bs-primary-rgb: 12,12,12;border-radius: 36px;border-width: 0;font-weight: bold;font-family: Inter, sans-serif;">О нас</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-primary shadow hoverButton" role="button" onclick="document.querySelector('.container.pt-4.pt-xl-5').scrollIntoView({behavior: 'smooth', block: 'start'})" style="background: #570000;--bs-primary: #0c0c0c;--bs-primary-rgb: 12,12,12;border-radius: 36px;border-width: 0;font-weight: bold;font-family: Inter, sans-serif;">Истории</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-primary shadow hoverButton" role="button" style="background: #570000;--bs-primary: #0c0c0c;--bs-primary-rgb: 12,12,12;border-radius: 36px;border-width: 0;font-weight: bold;" onclick="document.querySelector('.text-uppercase.fw-bold').scrollIntoView({behavior: 'smooth', block: 'start'})">Статьи</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
     </header>
     <div class="text-center" style="background: #fffdf2;">
-<section id="cover" style="background: url(&quot;{{ url_for('static', filename='img/Снимок экрана 2025-01-25 170350 (1).png') }}&quot;) bottom / cover repeat, linear-gradient(black, rgb(133,133,133) 52%, white), #929292;color: inherit;--bs-body-bg: #f8f7ff;height: 640px;border-color: #570000;" class="ms-0">
+        <section id="cover" style="background: url(&quot;{{ url_for('static', filename='img/Снимок экрана 2025-01-25 170350 (1).png') }}&quot;) bottom / cover repeat, linear-gradient(black, rgb(133,133,133) 52%, white), #929292;color: inherit;--bs-body-bg: #f8f7ff;height: 640px;border-color: #570000;" class="ms-0">
             <div style="font-size: 14px;"><small class="pt-0" style="width: 30px;font-weight: bold;font-size: 16px;font-family: Inter, sans-serif;">МЫ ПОМОЖЕМ ПОДРОСТКАМ РАЗОБРАТЬСЯ В СЕБЕ</small>
                 <h1 class="text-center mt-3" style="color: #ffffff;font-size: 54px;font-weight: bold;font-family: Inter, sans-serif;">SENIFUN</h1>
                 <p style="font-family: Inter, sans-serif;font-size: 22px;font-weight: bold;margin-right: 30px;margin-left: 30px;">Современные подростки встречаются с разнообразными вызовами и переменами в социуме. Это может содействовать возникновению различных психологических сложностей. Наш проект направлен на психологическую поддержку подростков<br><br></p>
@@ -96,7 +109,7 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="p-xl-5 m-xl-5"><img class="rounded img-fluid w-100 fit-cover" style="min-height: 300px;" src="{{ url_for('static', filename='img/IMG_1915.png') }}"></div>
+                    <div class="p-xl-5 m-xl-5"><img class="rounded img-fluid w-100 fit-cover" style="min-height: 300px;" src="{{ url_for('static', filename='img/IMG_1915.PNG') }}"></div>
                 </div>
             </div>
         </div>
