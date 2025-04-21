@@ -22,6 +22,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="Senifun" />
     <link rel="manifest" href="/static/site.webmanifest" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/buttons.css') }}">
 </head>
 
 <body style="background: rgb(87,0,0);">
@@ -70,7 +71,7 @@
         <div class="container py-4 py-lg-5" style="position: relative;padding-left: 6.5%;padding-right: 6.5%;margin: auto;background: #570000;max-width: none;width: 100%;">
             <hr>
             <div class="text-muted d-flex flex-column-reverse justify-content-between align-items-center pt-3 ms-0 ps-0" style="height: inherit;">
-                <p class="mb-0">Copyright © 2025 Senifun</p><small onclick='location.href=&quot;{{ url_for("about") }}&quot;' >О нас</small> <small onclick="window.scrollTo(0, 0)"> Back to top</small>
+                <p class="mb-0 ">Copyright © 2025 Senifun</p><small class="hoverButton" onclick='location.href=&quot;{{ url_for("about") }}&quot;' >О нас</small> <small class="hoverButton" onclick="window.scrollTo(0, 0)"> Back to top</small>
                 <ul class="list-inline mb-0">
                     <li class="list-inline-item"></li>
                 </ul>

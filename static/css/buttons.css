@@ -3,6 +3,38 @@
 }
 
 .hoverButtontry:hover {
-    color: #e8dbd2;
-    background: black;
+    background: #946b54;
 }
+
+.hoverButton1:hover {
+
+    color: #e8dbd2;
+}
+
+.hoverButton2hover{
+
+    color: #3F888F ;
+}
+
+.hoverButton2:hover{
+
+    color: rgb(6, 160, 178) ;
+}
+
+.hoverButtontry {
+    color: white;
+    background: #a89382;
+}
+
+.hoverButton1:hover{
+
+    color: #a89382;
+}
+
+.hoverButton1{
+
+    color: black;
+}
+
+
+

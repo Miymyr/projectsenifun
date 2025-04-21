@@ -1,0 +1,339 @@
+ <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Стресс из-за учебы - Senifun</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #800000;
+            --secondary: #0a9396;
+            --light-bg: #faf8f1;
+            --light-accent: #e9ecef;
+            --text-dark: #212121;
+        }
+
+        body {
+            font-family: 'Roboto', 'Segoe UI', sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+        }
+
+        .navbar {
+            background-color: var(--primary);
+            padding: 1rem 2rem;
+        }
+
+        .navbar-brand {
+            color: white;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+
+        .nav-link {
+            color: rgba(255, 255, 255, 0.9) !important;
+        }
+
+        .hero-section {
+            background-color: #f8f9fa;
+            background-image: linear-gradient(120deg, rgba(128, 0, 0, 0.9), rgba(128, 0, 0, 0.7)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400"><rect width="800" height="400" fill="%23f8f9fa"/><g fill="%23e9ecef"><circle cx="150" cy="150" r="80"/><circle cx="650" cy="250" r="100"/><circle cx="350" cy="350" r="70"/><circle cx="450" cy="50" r="90"/></g></svg>');
+            background-size: cover;
+            padding: 3rem 0;
+            color: white;
+            margin-bottom: 2rem;
+        }
+
+        .article-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .article-container {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .article-image {
+            text-align: center;
+            margin: 1.5rem 0 2.5rem;
+        }
+
+        .article-image img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .article-content {
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        .article-content h2 {
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .article-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .tips-list {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+        }
+
+        .tips-list-title {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .tip-item {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #e9ecef;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .tip-item:last-child {
+            border-bottom: none;
+        }
+
+        .tip-number {
+            color: var(--secondary);
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-right: 1rem;
+            min-width: 2rem;
+        }
+
+        .highlight-box {
+            background-color: #e9f5f5;
+            border-left: 4px solid var(--secondary);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .quote-box {
+            font-style: italic;
+            color: #495057;
+            padding: 1rem 2rem;
+            position: relative;
+            margin: 2rem 0;
+        }
+
+        .quote-box:before {
+            content: """;
+            font-size: 4rem;
+            color: #e9ecef;
+            position: absolute;
+            left: 0;
+            top: -20px;
+        }
+
+        .footer {
+            background-color: var(--primary);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .footer a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .related-articles {
+            margin: 3rem 0;
+        }
+
+        .related-articles h3 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .related-card {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .related-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-header {
+            background-color: var(--primary);
+            color: white;
+            font-weight: 600;
+            padding: 1rem;
+        }
+
+        .btn-primary {
+            background-color: var(--secondary);
+            border-color: var(--secondary);
+        }
+
+        .btn-primary:hover {
+            background-color: #087f7f;
+            border-color: #087f7f;
+        }
+
+        @media (max-width: 768px) {
+            .article-container {
+                padding: 1.5rem;
+            }
+
+            .article-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Senifun</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Игры</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Статьи</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">О нас</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="container text-center">
+            <h1 class="article-title">Финансовые трудности</h1>
+            <p class="lead">Советы, которые помогут справиться с финансовыми трудностями </p>
+        </div>
+    </div>
+
+    <!-- Article Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="article-container">
+                    <div class="article-image">
+                        <img src="{{ url_for('static', filename='img/IMG_1892 (1).PNG') }}" alt="Иллюстрация стресса из-за учебы" class="img-fluid">
+                    </div>
+
+
+
+                    <div class="article-content">
+                        <p>Финансовые трудности среди молодежи – это комплексная проблема, затрагивающая не только экономическое благополучие, но и психологическое состояние, образовательные возможности и будущее карьерное развитие. Именно в этот период молодые люди сталкиваются с первыми серьезными финансовыми вызовами, которые формируют их отношение к деньгам и управлению ими на всю жизнь.</p>
+                                                <h2>Причины финансовых трудностей</h2>
+                        <p>Одной из основных причин является недостаток финансовой грамотности. В школах и семьях редко уделяют достаточно внимания обучению основам бюджета, кредитования и инвестирования. Молодые люди часто не осознают последствий импульсивных покупок, не умеют планировать свои расходы и не понимают принципов работы финансовых институтов.
+Вторая причина – ограниченные возможности трудоустройства. Поиск работы для несовершеннолетних или студентов без опыта часто сопряжен с трудностями. Предлагаемые вакансии, как правило, низкооплачиваемые и не обеспечивают достаточного дохода для покрытия базовых потребностей и образовательных расходов.
+Третья причина – влияние социальных сетей и рекламы. Постоянная демонстрация роскошной жизни и модных товаров создает у молодых людей желание приобретать то, что им не по карману. </p>
+
+
+                        <div class="tips-list">
+                            <h3 class="tips-list-title">Советы, которые помогут вам справиться с финансовыми трудностями:</h3>
+
+                            <div class="tip-item">
+                                <div class="tip-number">1.</div>
+                                <div>Учет доходов и расходов: основа финансовой грамотности. Начните с простого – записывайте все свои поступления (стипендия, подработка, помощь от родителей) и траты. Существует множество приложений, которые упрощают эту задачу. Анализируя свои расходы, вы увидите, куда утекают деньги и от чего можно отказаться.</div>
+                            </div>
+
+                            <div class="tip-item">
+                                <div class="tip-number">2.</div>
+                                <div>Создание бюджета: планируйте свои финансы. Бюджет – это ваш финансовый план на месяц. Определите фиксированные расходы и переменные. Ставьте перед собой финансовые цели – накопить на что-то конкретное.</div>
+                            </div>
+
+                            <div class="tip-item">
+                                <div class="tip-number">3.</div>
+                                <div>Подработка: увеличьте свои доходы. Ищите возможности для подработки. Это может быть работа курьером, оператором пункта выдачи, промоутером. Не бойтесь пробовать разные варианты – это не только принесет доход, но и поможет развить полезные навыки.</div>
+                            </div>
+
+                            <div class="tip-item">
+                                <div class="tip-number">4.</div>
+                                <div>Экономьте разумно: ищите выгодные предложения. Сравнивайте цены, пользуйтесь скидками и акциями. Подумайте, можно ли заменить дорогие бренды на более доступные аналоги. Готовьте еду дома – это гораздо дешевле, чем питаться в кафе.</div>
+                            </div>
+
+                            <div class="tip-item">
+                                <div class="tip-number">5.</div>
+                                <div>Избегайте импульсивных покупок: дайте себе время подумать. Прежде чем купить что-то, задайте себе вопрос: действительно ли мне это нужно? Подождите несколько дней – возможно, желание пройдет.</div>
+                            </div>
+
+                            <div class="tip-item">
+                                <div class="tip-number">6.</div>
+                                <div>Учитесь финансовой грамотности: инвестируйте в свои знания. Читайте книги и статьи о финансах, посещайте семинары и вебинары. Чем больше вы знаете о деньгах, тем лучше будете ими управлять.</div>
+                            </div>
+                        </div>
+
+                        <p>Соблюдая эти простые советы, вы сможете не только справиться с финансовыми трудностями, но и заложить прочный фундамент для своего финансового будущего.</p>
+                    </div>
+                </div>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Senifun</h5>
+                    <p>Мы помогаем подросткам разобраться в себе</p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Навигация</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Главная</a></li>
+                        <li><a href="#">Игры</a></li>
+                        <li><a href="#">Статьи</a></li>
+                        <li><a href="#">О нас</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Контакты</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Email</a></li>
+                        <li><a href="#">Соцсети</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="mt-4 mb-3" style="background-color: rgba(255,255,255,0.2);">
+            <p class="text-center mb-0">Copyright © 2025 Senifun</p>
+            <p class="text-center"><a href="#">Back to top</a></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

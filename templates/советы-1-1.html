@@ -1,91 +1,351 @@
-<!DOCTYPE html>
-<html data-bs-theme="light" lang="en">
-
+ <!DOCTYPE html>
+<html lang="ru">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Pricing - Brand</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/swiper-icons.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/dh-header-cover-image-button.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/Features-Small-Icons-icons.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/Hero-Clean-Reverse-images.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/Lightbox-Gallery-No-Gutters-baguetteBox.min.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/Simple-Cover-cover.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/Simple-Cover.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/Simple-Slider-swiper-bundle.min.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/Simple-Slider.css') }}">
-    <link rel="icon" type="image/png" href="/static/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/static/favicon.svg" />
-    <link rel="shortcut icon" href="/static/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="Senifun" />
-    <link rel="manifest" href="/static/site.webmanifest" />
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Стресс из-за учебы - Senifun</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #800000;
+            --secondary: #0a9396;
+            --light-bg: #faf8f1;
+            --light-accent: #e9ecef;
+            --text-dark: #212121;
+        }
 
-<body style="background: rgb(87,0,0);">
-    <header class="bg-dark" style="background: #654633;--bs-dark: #fcf9f9;--bs-dark-rgb: 255, 253, 242;">
-        <nav class="navbar navbar-expand-md sticky-top py-3 navbar-dark" id="mainNav" style="background: #570000;">
-            <div class="container"><a class="navbar-brand d-flex align-items-center" href="{{ url_for('mane') }}"><span>Senifun</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navcol-1">
-                    <ul class="navbar-nav mx-auto">
-                        <li class="nav-item"></li>
-                        <li class="nav-item"></li>
-                        <li class="nav-item"></li>
-                        <li class="nav-item"></li>
-                        <li class="nav-item"></li>
-                    </ul><a class="btn btn-primary shadow" role="button" href="{{ url_for('about') }}" style="background: #570000;--bs-primary: #0c0c0c;--bs-primary-rgb: 12,12,12;border-radius: 36px;border-width: 0;">О нас</a>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div style="background: #fffdf2;">
-        <div class="container py-4 py-xl-5" style="background: #fffdf2;">
-            <div class="row mb-5">
-                <div class="col-md-8 col-xl-6 text-center mx-auto">
-                    <h2><strong><span style="color: rgb(0, 0, 0);">Проблемы в отношениях</span></strong></h2>
-                    <div class="row gy-4 w-100" style="max-width: inherit;position: relative;text-align: center;display: inline-flex;">
-                        <div class="col"><img width="100" height="80" src="{{ url_for('static', filename='img/IMG_1753.png') }}" style="width: 300px;height: 200px;"></div>
-                        <div class="col-12">
-                            <div class="card"></div>
-                        </div>
-                        <div class="col">
-                            <p style="text-align: justify;font-weight: bold;"><span style="color: rgb(0, 0, 0); background-color: rgba(255, 253, 242, 0);">Отношения — это тонкая нить, соединяющая души двух или более людей, возникшая из общения на какой-либо почве. Они могут быть личными, семейными, деловыми, дружескими или общественными, и их суть заключается в взаимном поведении, восприятии и понимании друг друга.</span><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 253, 242, 0);">Проблемы в отношениях — неизбежный спутник нашей жизни, затрагивающий сферы семьи, дружбы и любви. К числу наиболее часто встречающихся трудностей можно отнести:</span><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 253, 242, 0);">1. Отсутствие взаимопонимания, когда разница во взглядах и ценностях порождает конфликты. </span><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 253, 242, 0);">2. Несовместимость характеров, которая может вести к недопониманию из-за различий в эмоциональном восприятии. </span><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 253, 242, 0);">3. Недостаток общения, когда немалую роль играет нежелание открыто делиться чувствами. </span><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 253, 242, 0);">4. Ревность и зависть, возникающие из неуверенности в себе и чувства собственности. </span><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 253, 242, 0);">5. Недоверие, подрывающее основы отношений.</span><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 253, 242, 0);">6. Эгоизм, ставящий личные интересы на первое место. </span><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 253, 242, 0);">7. Негативные привычки, разрушающие близость.</span><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 253, 242, 0);">Ключевым фактором в разрешении конфликтных ситуаций становится умение вести конструктивный диалог. Это предполагает готовность выслушать точку зрения другого человека, не перебивая и не осуждая, а также способность ясно и четко выражать собственные мысли и чувства, избегая обвинений и оскорблений. Важно помнить, что цель диалога – не победить в споре, а найти компромиссное решение, удовлетворяющее обе стороны.</span><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 253, 242, 0);">Эффективным инструментом для укрепления отношений является проявление эмпатии. Способность поставить себя на место другого человека, понять его мотивы и переживания, позволяет смягчить напряженность и способствует сближению. Эмпатия подразумевает не просто сочувствие, а активное проявление заботы и поддержки.</span><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 253, 242, 0);">Кроме того, необходимо уделять внимание развитию эмоционального интеллекта. Умение распознавать и управлять своими эмоциями, а также понимать эмоциональное состояние других людей, помогает предотвращать конфликты и создавать более гармоничные отношения. Работа над собой, постоянное самосовершенствование и готовность к компромиссам – залог здоровых и крепких отношений.</span><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 253, 242, 0);">Не менее важным аспектом является умение признавать свои ошибки и брать на себя ответственность за свои действия. Готовность извиниться, если вы причинили боль или обиду, демонстрирует зрелость и уважение к чувствам другого человека. Это создает атмосферу доверия и способствует разрешению конфликтов.</span><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 253, 242, 0);">Активное слушание – еще один ключевой элемент конструктивного общения. Оно предполагает не только молчаливое выслушивание, но и проявление внимания к невербальным сигналам, таким как язык тела и тон голоса. Задавайте уточняющие вопросы, чтобы убедиться, что вы правильно поняли собеседника.</span><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 253, 242, 0);">Применяя эти принципы в повседневной жизни, вы сможете значительно улучшить качество своей коммуникации и построить более гармоничные отношения с окружающими.</span></p>
-                        </div>
-                    </div>
-                    <div class="card-img-overlay text-center d-flex flex-column justify-content-center align-items-center p-4" style="position: relative;"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container py-4 py-lg-5 ps-5" style="position: absolute;padding-bottom: initial;">
-        <hr>
-        <div class="text-muted d-flex flex-column-reverse justify-content-between align-items-center pt-3 ms-0 ps-0">
-            <p class="mb-0">Copyright © 2025 Senifun</p><small>О нас</small><small>Back to top</small>
-            <ul class="list-inline mb-0">
-                <li class="list-inline-item"></li>
-            </ul>
-        </div>
-    </div>
-    <footer class="bg-dark" style="width: 100%;text-align: center;max-width: inherit;">
-        <div class="container py-4 py-lg-5" style="position: relative;padding-left: 6.5%;padding-right: 6.5%;margin: auto;background: #570000;max-width: none;width: 100%;">
-            <hr>
-            <div class="text-muted d-flex flex-column-reverse justify-content-between align-items-center pt-3 ms-0 ps-0" style="height: inherit;">
-                <p class="mb-0">Copyright © 2025 Senifun</p><small onclick='location.href=&quot;{{ url_for("about") }}&quot;' >О нас</small> <small onclick="window.scrollTo(0, 0)"> Back to top</small>
-                <ul class="list-inline mb-0">
-                    <li class="list-inline-item"></li>
+        body {
+            font-family: 'Roboto', 'Segoe UI', sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+        }
+
+        .navbar {
+            background-color: var(--primary);
+            padding: 1rem 2rem;
+        }
+
+        .navbar-brand {
+            color: white;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+
+        .nav-link {
+            color: rgba(255, 255, 255, 0.9) !important;
+        }
+
+        .hero-section {
+            background-color: #f8f9fa;
+            background-image: linear-gradient(120deg, rgba(128, 0, 0, 0.9), rgba(128, 0, 0, 0.7)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400"><rect width="800" height="400" fill="%23f8f9fa"/><g fill="%23e9ecef"><circle cx="150" cy="150" r="80"/><circle cx="650" cy="250" r="100"/><circle cx="350" cy="350" r="70"/><circle cx="450" cy="50" r="90"/></g></svg>');
+            background-size: cover;
+            padding: 3rem 0;
+            color: white;
+            margin-bottom: 2rem;
+        }
+
+        .article-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .article-container {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .article-image {
+            text-align: center;
+            margin: 1.5rem 0 2.5rem;
+        }
+
+        .article-image img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .article-content {
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        .article-content h2 {
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .article-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .tips-list {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+        }
+
+        .tips-list-title {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .tip-item {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #e9ecef;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .tip-item:last-child {
+            border-bottom: none;
+        }
+
+        .tip-number {
+            color: var(--secondary);
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-right: 1rem;
+            min-width: 2rem;
+        }
+
+        .highlight-box {
+            background-color: #e9f5f5;
+            border-left: 4px solid var(--secondary);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .quote-box {
+            font-style: italic;
+            color: #495057;
+            padding: 1rem 2rem;
+            position: relative;
+            margin: 2rem 0;
+        }
+
+        .quote-box:before {
+            content: """;
+            font-size: 4rem;
+            color: #e9ecef;
+            position: absolute;
+            left: 0;
+            top: -20px;
+        }
+
+        .footer {
+            background-color: var(--primary);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .footer a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .related-articles {
+            margin: 3rem 0;
+        }
+
+        .related-articles h3 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .related-card {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .related-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-header {
+            background-color: var(--primary);
+            color: white;
+            font-weight: 600;
+            padding: 1rem;
+        }
+
+        .btn-primary {
+            background-color: var(--secondary);
+            border-color: var(--secondary);
+        }
+
+        .btn-primary:hover {
+            background-color: #087f7f;
+            border-color: #087f7f;
+        }
+
+        @media (max-width: 768px) {
+            .article-container {
+                padding: 1.5rem;
+            }
+
+            .article-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Senifun</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Игры</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Статьи</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">О нас</a>
+                    </li>
                 </ul>
             </div>
         </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="{{ url_for('static', filename='js/bs-init.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/bold-and-dark.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/Lightbox-Gallery-No-Gutters-baguetteBox.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/Lightbox-Gallery-No-Gutters-Lightbox-Gallery.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/Simple-Slider-swiper-bundle.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/Simple-Slider.js') }}"></script>
-</body>
+    </nav>
 
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="container text-center">
+            <h1 class="article-title"> Отношения</h1>
+            <p class="lead">Советы, которые помогут улучшить взаимопонимание в отношениях</p>
+        </div>
+    </div>
+
+    <!-- Article Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="article-container">
+                    <div class="article-image">
+                        <img src="{{ url_for('static', filename='img/IMG_1879 (1).PNG') }}" alt="Иллюстрация стресса из-за учебы" class="img-fluid">
+                    </div>
+
+                    <div class="article-content">
+                        <p>Отношения — это тонкая нить, соединяющая души двух или более людей, возникшая  из общения на какой-либо почве. Они могут быть личными, семейными, деловыми, дружескими или общественными, и их суть заключается в взаимном поведении, восприятии и понимании друг друга.</p>
+                        <p>Проблемы в отношениях — неизбежный спутник нашей жизни, затрагивающий сферы семьи, дружбы и любви.</p>
+
+                        <div class="tips-list">
+                            <h3 class="tips-list-title">К числу наиболее часто встречающихся трудностей можно отнести:</h3>
+
+                            <div class="tip-item">
+                                <div class="tip-number">1.</div>
+                                <div>Отсутствие взаимопонимания, когда разница во взглядах и ценностях порождает конфликты. </div>
+                            </div>
+
+                            <div class="tip-item">
+                                <div class="tip-number">2.</div>
+                                <div>Несовместимость характеров, которая может вести к недопониманию из-за различий в эмоциональном восприятии. </div>
+                            </div>
+
+                            <div class="tip-item">
+                                <div class="tip-number">3.</div>
+                                <div>Недостаток общения, когда немалую роль играет нежелание открыто делиться чувствами. </div>
+                            </div>
+
+                            <div class="tip-item">
+                                <div class="tip-number">4.</div>
+                                <div>Ревность и зависть, возникающие из неуверенности в себе и чувства собственности. </div>
+                            </div>
+
+                            <div class="tip-item">
+                                <div class="tip-number">5.</div>
+                                <div>Недоверие, подрывающее основы отношений.</div>
+                            </div>
+
+                            <div class="tip-item">
+                                <div class="tip-number">6.</div>
+                                <div>Эгоизм, ставящий личные интересы на первое место. </div>
+                            </div>
+
+                            <div class="tip-item">
+                                <div class="tip-number">7.</div>
+                                <div>Негативные привычки, разрушающие близость.</div>
+                            </div>
+                        </div>
+
+                        <p>Ключевым фактором в разрешении конфликтных ситуаций становится умение вести конструктивный диалог. Это предполагает готовность выслушать точку зрения другого человека, не перебивая и не осуждая, а также способность ясно и четко выражать собственные мысли и чувства, избегая обвинений и оскорблений. Важно помнить, что цель диалога – не победить в споре, а найти компромиссное решение, удовлетворяющее обе стороны.</p>
+
+                        <div class="highlight-box">
+                            <p>Эффективным инструментом для укрепления отношений является проявление эмпатии. Способность поставить себя на место другого человека, понять его мотивы и переживания, позволяет смягчить напряженность и способствует сближению. Эмпатия подразумевает не просто сочувствие, а активное проявление заботы и поддержки.</p>
+                        </div>
+
+                        <div class="quote-box">
+                            <p>Кроме того, необходимо уделять внимание развитию эмоционального интеллекта. Умение распознавать и управлять своими эмоциями, а также понимать эмоциональное состояние других людей, помогает предотвращать конфликты и создавать более гармоничные отношения. Работа над собой, постоянное самосовершенствование и готовность к компромиссам – залог здоровых и крепких отношений.</p>
+                        </div>
+
+
+                        <p>Не менее важным аспектом является умение признавать свои ошибки и брать на себя ответственность за свои действия. Готовность извиниться, если вы причинили боль или обиду, демонстрирует зрелость и уважение к чувствам другого человека. Это создает атмосферу доверия и способствует разрешению конфликтов.
+Активное слушание – еще один ключевой элемент конструктивного общения. Оно предполагает не только молчаливое выслушивание, но и проявление внимания к невербальным сигналам, таким как язык тела и тон голоса. Задавайте уточняющие вопросы, чтобы убедиться, что вы правильно поняли собеседника.</p>
+
+
+                        <p>Применяя эти принципы в повседневной жизни, вы сможете значительно улучшить качество своей коммуникации и построить более гармоничные отношения с окружающими.</p>
+                    </div>
+                </div>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Senifun</h5>
+                    <p>Мы помогаем подросткам разобраться в себе</p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Навигация</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Главная</a></li>
+                        <li><a href="#">Игры</a></li>
+                        <li><a href="#">Статьи</a></li>
+                        <li><a href="#">О нас</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Контакты</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Email</a></li>
+                        <li><a href="#">Соцсети</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="mt-4 mb-3" style="background-color: rgba(255,255,255,0.2);">
+            <p class="text-center mb-0">Copyright © 2025 Senifun</p>
+            <p class="text-center"><a href="#">Back to top</a></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
