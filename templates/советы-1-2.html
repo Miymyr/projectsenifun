@@ -7,181 +7,11 @@
 
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-
     <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/dh-header-cover-image-button.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/Hero-Clean-Reverse-images.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/advice.css') }}">
 
-    <style>
-        :root {
-            --primary: #800000;
-            --secondary: #0a9396;
-            --light-bg: #faf8f1;
-            --light-accent: #e9ecef;
-            --text-dark: #212121;
-        }
-
-        body {
-            font-family: 'Roboto', 'Segoe UI', sans-serif;
-            background-color: var(--light-bg);
-            color: var(--text-dark);
-        }
-
-        .article-container {
-            background-color: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-            padding: 2.5rem;
-            margin-bottom: 3rem;
-        }
-
-        .article-image {
-            text-align: center;
-            margin: 1.5rem 0 2.5rem;
-        }
-
-        .article-image img {
-            max-width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .article-content {
-            font-size: 1.1rem;
-            line-height: 1.7;
-        }
-
-        .article-content h2 {
-            font-weight: 600;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            color: var(--primary);
-        }
-
-        .article-content p {
-            margin-bottom: 1.5rem;
-        }
-
-        .tips-list {
-            background-color: #f8f9fa;
-            border-radius: 8px;
-            padding: 1.5rem 2rem;
-            margin: 2rem 0;
-        }
-
-        .tips-list-title {
-            color: var(--primary);
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        .tip-item {
-            padding: 0.75rem 0;
-            border-bottom: 1px solid #e9ecef;
-            display: flex;
-            align-items: flex-start;
-        }
-
-        .tip-item:last-child {
-            border-bottom: none;
-        }
-
-        .tip-number {
-            color: var(--secondary);
-            font-weight: 700;
-            font-size: 1.1rem;
-            margin-right: 1rem;
-            min-width: 2rem;
-        }
-
-        .highlight-box {
-            background-color: #e9f5f5;
-            border-left: 4px solid var(--secondary);
-            padding: 1.5rem;
-            margin: 2rem 0;
-            border-radius: 0 8px 8px 0;
-        }
-
-        .quote-box {
-            font-style: italic;
-            color: #495057;
-            padding: 1rem 2rem;
-            position: relative;
-            margin: 2rem 0;
-        }
-
-        .quote-box:before {
-            content: """;
-            font-size: 4rem;
-            color: #e9ecef;
-            position: absolute;
-            left: 0;
-            top: -20px;
-        }
-
-        .related-articles {
-            margin: 3rem 0;
-        }
-
-        .related-articles h3 {
-            color: var(--primary);
-            margin-bottom: 1.5rem;
-        }
-
-        .related-card {
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .related-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .card-header {
-            background-color: var(--primary);
-            color: white;
-            font-weight: 600;
-            padding: 1rem;
-        }
-
-        .btn-primary {
-            background-color: var(--accent);
-            border-color: var(--accent);
-        }
-
-        .btn-primary:hover {
-            background-color: #0a8a95;
-            border-color: #0a8a95;
-        }
-
-        @media (max-width: 768px) {
-            .article-container {
-                padding: 1.5rem;
-            }
-        }
-
-        .page-header {
-            width: 100%;
-            margin-top: 97px;
-            padding: 3rem 0 2rem;
-            text-align: center;
-            position: relative;
-        }
-
-        .page-header::after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 3px;
-            background-color: var(--accent);
-        }
-    </style>
-    
     <link rel="icon" type="image/png" href="/static/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/static/favicon.svg" />
     <link rel="shortcut icon" href="/static/favicon.ico" />
@@ -190,7 +20,6 @@
     <link rel="manifest" href="/static/site.webmanifest" />
 </head>
 <body>
-    <!-- Header -->
     <header class="bg-dark" style="background: #654633;--bs-dark: #fcf9f9;--bs-dark-rgb: 255, 253, 242;">
         <nav class="navbar navbar-expand-md sticky-top py-3 navbar-dark" id="mainNav" style="background: #570000;">
             <div class="container">
@@ -208,7 +37,7 @@
                             <a class="btn btn-primary shadow hoverButton" role="button" href="{{ url_for('mane') }}#games" style="background: #570000;--bs-primary: #0c0c0c;--bs-primary-rgb: 12,12,12;border-radius: 36px;border-width: 0;font-weight: bold;font-family: Inter, sans-serif;">Истории</a>
                         </li>
                         <li class="nav-item">
-                            <a class="btn btn-primary shadow hoverButton" role="button" href="{{ url_for('mane') }}#articles" style="background: #570000;--bs-primary: #0c0c0c;--bs-primary-rgb: 12,12,12;border-radius: 36px;border-width: 0;font-weight: bold;">Статьи</a>
+                            <a class="btn btn-primary shadow hoverButton" role="button" href="{{ url_for('advice') }}" style="background: #570000;--bs-primary: #0c0c0c;--bs-primary-rgb: 12,12,12;border-radius: 36px;border-width: 0;font-weight: bold;">Статьи</a>
                         </li>
                     </ul>
                 </div>
@@ -216,7 +45,6 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
     <header class="page-header">
         <div class="container">
             <h1 class="display-4 fw-bold">Самооценка</h1>
@@ -224,7 +52,6 @@
         </div>
     </header>
 
-    <!-- Article Content -->
     <div class="container">
         <div class="row">
             <div class="col-lg-8 mx-auto">
@@ -270,7 +97,6 @@
         </div>
     </div>
 
-    <!-- Footer -->
     <footer style="width: 100%;text-align: center;max-width: inherit; background: rgb(87, 0, 0);">
         <div class="container py-4 py-lg-5" style="position: relative;padding-left: 6.5%;padding-right: 6.5%;margin: auto;background: #570000;max-width: none;width: 100%;">
             <hr>
