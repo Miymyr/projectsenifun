@@ -1,0 +1,16 @@
+@media (max-width: 768px) {
+    #cover h1 {
+        font-size: 40px !important;
+    }
+    #cover p {
+        font-size: 16px !important;
+        margin-right: 15px !important;
+        margin-left: 15px !important;
+    }
+    #cover small {
+        font-size: 14px !important;
+    }
+    #cover {
+        height: 540px !important;
+    }
+}
