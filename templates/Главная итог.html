@@ -9,13 +9,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/swiper-icons.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/dh-header-cover-image-button.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/dh-row-titile-text-image-right-1.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/Features-Small-Icons-icons.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/Hero-Clean-Reverse-images.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/Lightbox-Gallery-No-Gutters-baguetteBox.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/Simple-Cover-cover.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/Simple-Cover.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/Simple-Slider-swiper-bundle.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/Simple-Slider.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/buttons.css') }}">
@@ -36,10 +31,10 @@
                             <a class="btn btn-primary shadow hoverButton" role="button" href="{{ url_for('about') }}" style="background: #570000;--bs-primary: #0c0c0c;--bs-primary-rgb: 12,12,12;border-radius: 36px;border-width: 0;font-weight: bold;font-family: Inter, sans-serif;">О нас</a>
                         </li>
                         <li class="nav-item">
-                            <a class="btn btn-primary shadow hoverButton" role="button" onclick="document.querySelector('.container.pt-4.pt-xl-5').scrollIntoView({behavior: 'smooth', block: 'start'})" style="background: #570000;--bs-primary: #0c0c0c;--bs-primary-rgb: 12,12,12;border-radius: 36px;border-width: 0;font-weight: bold;font-family: Inter, sans-serif;">Истории</a>
+                            <a class="btn btn-primary shadow hoverButton" role="button" href="{{ url_for('mane') }}#games" style="background: #570000;--bs-primary: #0c0c0c;--bs-primary-rgb: 12,12,12;border-radius: 36px;border-width: 0;font-weight: bold;font-family: Inter, sans-serif;">Истории</a>
                         </li>
                         <li class="nav-item">
-                            <a class="btn btn-primary shadow hoverButton" role="button" style="background: #570000;--bs-primary: #0c0c0c;--bs-primary-rgb: 12,12,12;border-radius: 36px;border-width: 0;font-weight: bold;" onclick="document.querySelector('.text-uppercase.fw-bold').scrollIntoView({behavior: 'smooth', block: 'start'})">Статьи</a>
+                            <a class="btn btn-primary shadow hoverButton" role="button" href="{{ url_for('mane') }}#articles" style="background: #570000;--bs-primary: #0c0c0c;--bs-primary-rgb: 12,12,12;border-radius: 36px;border-width: 0;font-weight: bold;">Статьи</a>
                         </li>
                     </ul>
                 </div>
@@ -55,20 +50,8 @@
                     <i class="fa fa-chevron-down" style="color: white; font-size: 18px;"></i>
                 </button>
             </div>
-            <div class="simple-slider">
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide" style="background: url( https://cdn.bootstrapstudio.io/placeholders/1400x800.png') }} ) center center / cover no-repeat;"></div>
-                        <div class="swiper-slide" style="background: url( https://cdn.bootstrapstudio.io/placeholders/1400x800.png') }} ) center center / cover no-repeat;"></div>
-                        <div class="swiper-slide" style="background: url( https://cdn.bootstrapstudio.io/placeholders/1400x800.png') }} ) center center / cover no-repeat;"></div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-                </div>
-            </div>
         </section>
-        <div class="container pt-4 pt-xl-5">
+        <div class="container pt-4 pt-xl-5" id="games">
             <div class="row pt-5">
                 <div class="col-md-8 col-xl-6 text-center text-md-start mx-auto">
                     <div class="text-center">
@@ -93,19 +76,19 @@
                         <div class="card bg-info-light">
                             <div class="card-body text-center px-4 py-5 px-md-5">
                                 <h5 class="fw-bold card-title mb-3" style="color: rgb(0,0,0);font-weight: bold;font-family: Inter, sans-serif;">Проблемы в отношениях</h5>
-                                <p class="fw-bold text-info card-text mb-2 hoverButton2" style="text-align: center;font-family: Inter, sans-serif;">Интерактив, созданный для подростков, столкнувшихся с трудностями в личных взаимоотношениях.<br><br></p><button class="btn btn-info btn-sm" type="button">Перейти</button>
+                                <p class="fw-bold text-info card-text mb-2" style="text-align: center;font-family: Inter, sans-serif;">Интерактив, созданный для подростков, столкнувшихся с трудностями в личных взаимоотношениях.<br><br></p><button class="btn btn-info btn-sm" type="button">Перейти</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="container py-4 py-xl-5 mt-lg-0">
+        <div class="container py-4 py-xl-5 mt-lg-0" id="articles">
             <div class="row gy-4 gy-md-0">
                 <div class="col-md-6 text-center text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center">
                     <div style="max-width: 350px;">
                         <h2 class="text-uppercase fw-bold" style="color: rgb(14,14,14);">Полезные статьи</h2>
-                        <p class="my-3 hoverButton2" style="color: rgb(23,22,22);font-weight: bold;">Сборник матриалов с советами</p><button class="btn btn-info btn-sm" onclick='location.href=&quot;{{ url_for("advice") }}&quot;' style="width: 200px; height: 50px; font-size: 1.2em" type="button">Перейти</button>
+                        <p class="my-3" style="color: rgb(23,22,22);font-weight: bold;">Сборник матриалов с советами</p><button class="btn btn-info btn-sm" onclick='location.href=&quot;{{ url_for("advice") }}&quot;' style="width: 200px; height: 50px; font-size: 1.2em" type="button">Перейти</button>
                     </div>
                 </div>
                 <div class="col-md-6">

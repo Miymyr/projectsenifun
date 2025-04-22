@@ -1,10 +1,17 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Стресс из-за учебы - Senifun</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Давление со стороны сверстников - Senifun</title>
+
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dh-header-cover-image-button.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Hero-Clean-Reverse-images.css') }}">
+
     <style>
         :root {
             --primary: #800000;
@@ -18,36 +25,6 @@
             font-family: 'Roboto', 'Segoe UI', sans-serif;
             background-color: var(--light-bg);
             color: var(--text-dark);
-        }
-
-        .navbar {
-            background-color: var(--primary);
-            padding: 1rem 2rem;
-        }
-
-        .navbar-brand {
-            color: white;
-            font-weight: 700;
-            font-size: 1.5rem;
-        }
-
-        .nav-link {
-            color: rgba(255, 255, 255, 0.9) !important;
-        }
-
-        .hero-section {
-            background-color: #f8f9fa;
-            background-image: linear-gradient(120deg, rgba(128, 0, 0, 0.9), rgba(128, 0, 0, 0.7)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400"><rect width="800" height="400" fill="%23f8f9fa"/><g fill="%23e9ecef"><circle cx="150" cy="150" r="80"/><circle cx="650" cy="250" r="100"/><circle cx="350" cy="350" r="70"/><circle cx="450" cy="50" r="90"/></g></svg>');
-            background-size: cover;
-            padding: 3rem 0;
-            color: white;
-            margin-bottom: 2rem;
-        }
-
-        .article-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
         }
 
         .article-container {
@@ -142,23 +119,6 @@
             top: -20px;
         }
 
-        .footer {
-            background-color: var(--primary);
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-        }
-
-        .footer a {
-            color: rgba(255, 255, 255, 0.8);
-            text-decoration: none;
-        }
-
-        .footer a:hover {
-            color: white;
-            text-decoration: underline;
-        }
-
         .related-articles {
             margin: 3rem 0;
         }
@@ -187,60 +147,82 @@
         }
 
         .btn-primary {
-            background-color: var(--secondary);
-            border-color: var(--secondary);
+            background-color: var(--accent);
+            border-color: var(--accent);
         }
 
         .btn-primary:hover {
-            background-color: #087f7f;
-            border-color: #087f7f;
+            background-color: #0a8a95;
+            border-color: #0a8a95;
         }
 
         @media (max-width: 768px) {
             .article-container {
                 padding: 1.5rem;
             }
+        }
 
-            .article-title {
-                font-size: 2rem;
-            }
+        .page-header {
+            width: 100%;
+            margin-top: 97px;
+            padding: 3rem 0 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .page-header::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background-color: var(--accent);
         }
     </style>
+    
+    <link rel="icon" type="image/png" href="/static/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/static/favicon.svg" />
+    <link rel="shortcut icon" href="/static/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Senifun" />
+    <link rel="manifest" href="/static/site.webmanifest" />
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">Senifun</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Главная</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Игры</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Статьи</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">О нас</a>
-                    </li>
-                </ul>
+    <!-- Header -->
+    <header class="bg-dark" style="background: #654633;--bs-dark: #fcf9f9;--bs-dark-rgb: 255, 253, 242;">
+        <nav class="navbar navbar-expand-md sticky-top py-3 navbar-dark" id="mainNav" style="background: #570000;">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center hoverButton" href="/" onclick='location.href=&quot;{{ url_for("mane") }}&quot;'><span>Senifun</span></a>
+                <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1">
+                    <span class="visually-hidden">Toggle navigation</span>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navcol-1" style="font-weight: bold;">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="btn btn-primary shadow hoverButton" role="button" href="{{ url_for('about') }}" style="background: #570000;--bs-primary: #0c0c0c;--bs-primary-rgb: 12,12,12;border-radius: 36px;border-width: 0;font-weight: bold;font-family: Inter, sans-serif;">О нас</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-primary shadow hoverButton" role="button" href="{{ url_for('mane') }}#games" style="background: #570000;--bs-primary: #0c0c0c;--bs-primary-rgb: 12,12,12;border-radius: 36px;border-width: 0;font-weight: bold;font-family: Inter, sans-serif;">Истории</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-primary shadow hoverButton" role="button" href="{{ url_for('mane') }}#articles" style="background: #570000;--bs-primary: #0c0c0c;--bs-primary-rgb: 12,12,12;border-radius: 36px;border-width: 0;font-weight: bold;">Статьи</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
     <!-- Hero Section -->
-    <div class="hero-section">
-        <div class="container text-center">
-            <h1 class="article-title">Давление со стороны сверстников</h1>
+    <header class="page-header">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Давление со стороны сверстников</h1>
             <p class="lead">Как справиться с давлением со стороны сверстников</p>
         </div>
-    </div>
+    </header>
 
     <!-- Article Content -->
     <div class="container">
@@ -248,7 +230,7 @@
             <div class="col-lg-8 mx-auto">
                 <div class="article-container">
                     <div class="article-image">
-                        <img src="{{ url_for('static', filename='img/IMG_1880 (2).PNG') }}" alt="Иллюстрация стресса из-за учебы" class="img-fluid">
+                        <img src="{{ url_for('static', filename='img/IMG_1880 (2).PNG') }}" alt="Иллюстрация давления со стороны сверстников" class="img-fluid">
                     </div>
 
                     <div class="article-content">
@@ -276,52 +258,46 @@
                                 <div class="tip-number">4.</div>
                                 <div>Помните о своих целях: Сосредоточьтесь на своих долгосрочных целях и не позволяйте давлению сверстников отвлекать вас от них. Ваши мечты и амбиции – это лучший компас в сложных ситуациях.</div>
                             </div>
-
-
                         </div>
 
                         <h2>Эффективная коммуникация</h2>
-                        <p>Эффективная коммуникация – ключевой инструмент в борьбе с давлением. Научитесь говорить «нет» уверенно и спокойно, не оправдываясь и не извиняясь за свои убеждения. Объясните свою позицию, если это уместно, но не позволяйте себя уговорить или переубедить, если вы уверены в своей правоте. Важно помнить, что настоящие друзья будут уважать ваше решение, даже если оно отличается от их собственного.
-Не забывайте создавать вокруг себя атмосферу поддержки и понимания. Общайтесь с людьми, которые ценят вас за то, кто вы есть, а не за то, как вы им соответствуете. Поддержка близких и единомышленников поможет вам чувствовать себя увереннее в своих силах и противостоять негативному влиянию.
-Если ситуация становится слишком сложной, не бойтесь обратиться за помощью к взрослым, которым вы доверяете – родителям, учителям, психологам. Они смогут предоставить вам поддержку, советы и, при необходимости, вмешаться, чтобы защитить вас от негативного влияния. Помните, что просить о помощи – это нормально, и это признак зрелости, а не слабости.</p>
+                        <p>Эффективная коммуникация – ключевой инструмент в борьбе с давлением. Научитесь говорить «нет» уверенно и спокойно, не оправдываясь и не извиняясь за свои убеждения. Объясните свою позицию, если это уместно, но не позволяйте себя уговорить или переубедить, если вы уверены в своей правоте. Важно помнить, что настоящие друзья будут уважать ваше решение, даже если оно отличается от их собственного.</p>
+                        
+                        <p>Не забывайте создавать вокруг себя атмосферу поддержки и понимания. Общайтесь с людьми, которые ценят вас за то, кто вы есть, а не за то, как вы им соответствуете. Поддержка близких и единомышленников поможет вам чувствовать себя увереннее в своих силах и противостоять негативному влиянию.</p>
+                        
+                        <p>Если ситуация становится слишком сложной, не бойтесь обратиться за помощью к взрослым, которым вы доверяете – родителям, учителям, психологам. Они смогут предоставить вам поддержку, советы и, при необходимости, вмешаться, чтобы защитить вас от негативного влияния. Помните, что просить о помощи – это нормально, и это признак зрелости, а не слабости.</p>
 
                         <div class="highlight-box">
+                            <h4>Путь к независимости</h4>
                             <p>В конечном счете, умение противостоять давлению сверстников – это важный навык, который пригодится вам на протяжении всей жизни. Он помогает укрепить самооценку, развить уверенность в себе и научиться принимать собственные решения, руководствуясь своими ценностями и убеждениями. Это путь к независимости и самореализации.</p>
                         </div>
-
-
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 mb-4 mb-md-0">
-                    <h5>Senifun</h5>
-                    <p>Мы помогаем подросткам разобраться в себе</p>
-                </div>
-                <div class="col-md-4 mb-4 mb-md-0">
-                    <h5>Навигация</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#">Главная</a></li>
-                        <li><a href="#">Игры</a></li>
-                        <li><a href="#">Статьи</a></li>
-                        <li><a href="#">О нас</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h5>Контакты</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#">Email</a></li>
-                        <li><a href="#">Соцсети</a></li>
-                    </ul>
+                        
+                        <div class="quote-box">
+                            <p>Самый сильный тот, кто имеет власть над собой. Не позволяйте другим определять вашу дорогу в жизни.</p>
+                        </div>
+                        
+                        <p>Практикуя эти стратегии, вы постепенно научитесь противостоять давлению, сохраняя при этом здоровые отношения с окружающими. Помните, что вы имеете право на собственное мнение и выбор, и никто не может отнять у вас это право.</p>
+                    </div>
                 </div>
             </div>
-            <hr class="mt-4 mb-3" style="background-color: rgba(255,255,255,0.2);">
-            <p class="text-center mb-0">Copyright © 2025 Senifun</p>
-            <p class="text-center"><a href="#">Back to top</a></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer style="width: 100%;text-align: center;max-width: inherit; background: rgb(87, 0, 0);">
+        <div class="container py-4 py-lg-5" style="position: relative;padding-left: 6.5%;padding-right: 6.5%;margin: auto;background: #570000;max-width: none;width: 100%;">
+            <hr>
+            <div class="text-muted d-flex flex-column-reverse justify-content-between align-items-center pt-3 ms-0 ps-0" style="height: inherit;">
+                <p class="mb-0 ">Copyright © 2025 Senifun</p><small class="hoverButton" onclick='location.href=&quot;{{ url_for("about") }}&quot;' >О нас</small> <small class="hoverButton" onclick="window.scrollTo(0, 0)"> Back to top</small>
+                <ul class="list-inline mb-0">
+                    <li class="list-inline-item"></li>
+                </ul>
+            </div>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bs-init.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bold-and-dark.js') }}"></script>
 </body>
 </html>

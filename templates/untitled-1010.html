@@ -17,28 +17,50 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/Simple-Cover.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/Simple-Slider-swiper-bundle.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/Simple-Slider.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/buttons.css') }}">
 </head>
 
 <body style="background: rgb(87,0,0);">
     <header class="bg-dark" style="background: #654633;--bs-dark: #fcf9f9;--bs-dark-rgb: 255, 253, 242;">
         <nav class="navbar navbar-expand-md sticky-top py-3 navbar-dark" id="mainNav" style="background: #570000;">
-            <div class="container"><a class="navbar-brand d-flex align-items-center" href="{{ url_for('mane') }}"><span>Senifun</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navcol-1">
-                    <ul class="navbar-nav mx-auto">
-                        <li class="nav-item"></li>
-                        <li class="nav-item"></li>
-                        <li class="nav-item"></li>
-                        <li class="nav-item"></li>
-                        <li class="nav-item"></li>
-                    </ul><a class="btn btn-primary shadow" role="button" href="{{ url_for('about') }}" style="background: #570000;--bs-primary: #0c0c0c;--bs-primary-rgb: 12,12,12;border-radius: 36px;border-width: 0;">О нас</a>
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center hoverButton" href="/" onclick='location.href=&quot;{{ url_for("mane") }}&quot;'><span>Senifun</span></a>
+                <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1">
+                    <span class="visually-hidden">Toggle navigation</span>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navcol-1" style="font-weight: bold;">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="btn btn-primary shadow hoverButton" role="button" href="{{ url_for('about') }}" style="background: #570000;--bs-primary: #0c0c0c;--bs-primary-rgb: 12,12,12;border-radius: 36px;border-width: 0;font-weight: bold;font-family: Inter, sans-serif;">О нас</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-primary shadow hoverButton" role="button" href="{{ url_for('mane') }}#games" style="background: #570000;--bs-primary: #0c0c0c;--bs-primary-rgb: 12,12,12;border-radius: 36px;border-width: 0;font-weight: bold;font-family: Inter, sans-serif;">Истории</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-primary shadow hoverButton" role="button" href="{{ url_for('mane') }}#articles" style="background: #570000;--bs-primary: #0c0c0c;--bs-primary-rgb: 12,12,12;border-radius: 36px;border-width: 0;font-weight: bold;">Статьи</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
     </header>
     <div style="background: #fffdf2;">
-        <div class="container text-center py-4 py-xl-5 mt-lg-0"><strong style="color: rgb(0,0,0);font-size: 35px;"><br><strong>ВНИМАНИЕ</strong></strong><strong style="color: rgb(171,0,0);font-size: 24px;"><br><strong>Если вы играете со смартфона, переверните его в горизонтальное положение для удобства.</strong></strong><strong style="color: rgb(0,0,0);font-size: 24px;"><br><strong>В интерактивных играх мы создаем модели ситуаций, которые помогают лучше понять себя и свои эмоции. Это всего лишь симуляция, и не стоит воспринимать ее как отражение реальной жизни. Весь контент данной&nbsp;истории несёт развлекательный характер.&nbsp;Все персонажи и события являются вымышленными. Если вы играете со смартфона, переверните его в горизонтальное положение для удобства.</strong></strong>
-            <div></div><strong></strong>
-                        <p class="my-3 hoverButton2" </p><button class="btn btn-info btn-sm" onclick='location.href=&quot;{{ url_for("history1") }}&quot;' style="width: 200px; height: 50px; font-size: 1.2em" type="button">Начать</button>
+        <div class="container text-center py-4 py-xl-5 mt-lg-0">
+            <strong style="color: rgb(0,0,0);font-size: 35px;"><br>
+                <strong>ВНИМАНИЕ</strong>
+            </strong>
+            <strong style="color: rgb(171,0,0);font-size: 24px;">
+                <br>
+                <strong>Если вы играете со смартфона, переверните его в горизонтальное положение для удобства.</strong>
+            </strong>
+            <strong style="color: rgb(0,0,0);font-size: 24px;">
+                <br>
+                <strong>В интерактивных играх мы создаем модели ситуаций, которые помогают лучше понять себя и свои эмоции. Это всего лишь симуляция, и не стоит воспринимать ее как отражение реальной жизни. Весь контент данной&nbsp;истории несёт развлекательный характер.&nbsp;Все персонажи и события являются вымышленными. Если вы играете со смартфона, переверните его в горизонтальное положение для удобства.</strong>
+            </strong>
+            <div></div>
+            <p class="my-3"></p>
+            <button class="btn btn-info btn-sm hoverButton2" onclick='location.href=&quot;{{ url_for("history1") }}&quot;' style="width: 200px; height: 50px; font-size: 1.2em" type="button">Начать</button>
         </div>
     </div>
     <div class="container py-4 py-lg-5 ps-5" style="position: absolute;padding-bottom: initial;">

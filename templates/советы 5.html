@@ -1,10 +1,17 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Стресс из-за учебы - Senifun</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Преодоление тревоги - Senifun</title>
+
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dh-header-cover-image-button.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Hero-Clean-Reverse-images.css') }}">
+
     <style>
         :root {
             --primary: #800000;
@@ -18,36 +25,6 @@
             font-family: 'Roboto', 'Segoe UI', sans-serif;
             background-color: var(--light-bg);
             color: var(--text-dark);
-        }
-
-        .navbar {
-            background-color: var(--primary);
-            padding: 1rem 2rem;
-        }
-
-        .navbar-brand {
-            color: white;
-            font-weight: 700;
-            font-size: 1.5rem;
-        }
-
-        .nav-link {
-            color: rgba(255, 255, 255, 0.9) !important;
-        }
-
-        .hero-section {
-            background-color: #f8f9fa;
-            background-image: linear-gradient(120deg, rgba(128, 0, 0, 0.9), rgba(128, 0, 0, 0.7)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400"><rect width="800" height="400" fill="%23f8f9fa"/><g fill="%23e9ecef"><circle cx="150" cy="150" r="80"/><circle cx="650" cy="250" r="100"/><circle cx="350" cy="350" r="70"/><circle cx="450" cy="50" r="90"/></g></svg>');
-            background-size: cover;
-            padding: 3rem 0;
-            color: white;
-            margin-bottom: 2rem;
-        }
-
-        .article-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
         }
 
         .article-container {
@@ -142,23 +119,6 @@
             top: -20px;
         }
 
-        .footer {
-            background-color: var(--primary);
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-        }
-
-        .footer a {
-            color: rgba(255, 255, 255, 0.8);
-            text-decoration: none;
-        }
-
-        .footer a:hover {
-            color: white;
-            text-decoration: underline;
-        }
-
         .related-articles {
             margin: 3rem 0;
         }
@@ -187,60 +147,82 @@
         }
 
         .btn-primary {
-            background-color: var(--secondary);
-            border-color: var(--secondary);
+            background-color: var(--accent);
+            border-color: var(--accent);
         }
 
         .btn-primary:hover {
-            background-color: #087f7f;
-            border-color: #087f7f;
+            background-color: #0a8a95;
+            border-color: #0a8a95;
         }
 
         @media (max-width: 768px) {
             .article-container {
                 padding: 1.5rem;
             }
+        }
 
-            .article-title {
-                font-size: 2rem;
-            }
+        .page-header {
+            width: 100%;
+            margin-top: 97px;
+            padding: 3rem 0 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .page-header::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background-color: var(--accent);
         }
     </style>
+    
+    <link rel="icon" type="image/png" href="/static/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/static/favicon.svg" />
+    <link rel="shortcut icon" href="/static/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Senifun" />
+    <link rel="manifest" href="/static/site.webmanifest" />
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">Senifun</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Главная</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Игры</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Статьи</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">О нас</a>
-                    </li>
-                </ul>
+    <!-- Header -->
+    <header class="bg-dark" style="background: #654633;--bs-dark: #fcf9f9;--bs-dark-rgb: 255, 253, 242;">
+        <nav class="navbar navbar-expand-md sticky-top py-3 navbar-dark" id="mainNav" style="background: #570000;">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center hoverButton" href="/" onclick='location.href=&quot;{{ url_for("mane") }}&quot;'><span>Senifun</span></a>
+                <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1">
+                    <span class="visually-hidden">Toggle navigation</span>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navcol-1" style="font-weight: bold;">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="btn btn-primary shadow hoverButton" role="button" href="{{ url_for('about') }}" style="background: #570000;--bs-primary: #0c0c0c;--bs-primary-rgb: 12,12,12;border-radius: 36px;border-width: 0;font-weight: bold;font-family: Inter, sans-serif;">О нас</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-primary shadow hoverButton" role="button" href="{{ url_for('mane') }}#games" style="background: #570000;--bs-primary: #0c0c0c;--bs-primary-rgb: 12,12,12;border-radius: 36px;border-width: 0;font-weight: bold;font-family: Inter, sans-serif;">Истории</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-primary shadow hoverButton" role="button" href="{{ url_for('mane') }}#articles" style="background: #570000;--bs-primary: #0c0c0c;--bs-primary-rgb: 12,12,12;border-radius: 36px;border-width: 0;font-weight: bold;">Статьи</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
     <!-- Hero Section -->
-    <div class="hero-section">
-        <div class="container text-center">
-            <h1 class="article-title">Преодоление тревоги</h1>
-            <p class="lead">Психологическое здоровье. Советы для борьбы с апатией и тревогой </p>
+    <header class="page-header">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Преодоление тревоги</h1>
+            <p class="lead">Психологическое здоровье. Советы для борьбы с апатией и тревогой</p>
         </div>
-    </div>
+    </header>
 
     <!-- Article Content -->
     <div class="container">
@@ -248,13 +230,14 @@
             <div class="col-lg-8 mx-auto">
                 <div class="article-container">
                     <div class="article-image">
-                        <img src="{{ url_for('static', filename='img/IMG_1876 (3).PNG') }}" alt="Иллюстрация стресса из-за учебы" class="img-fluid">
+                        <img src="{{ url_for('static', filename='img/IMG_1876 (3).PNG') }}" alt="Иллюстрация тревоги и апатии" class="img-fluid">
                     </div>
 
                     <div class="article-content">
                         <p>Психологическое здоровье – это фундамент благополучия, и забота о нём не менее важна, чем о физическом. Жизнь полна вызовов, и иногда они могут негативно влиять на наше состояние. Важно знать, как справляться с проблемами и поддерживать свое ментальное здоровье. И в современном мире, полном стрессов и неопределенности, психологическое здоровье становится приоритетом. Два наиболее распространенных состояния, с которыми сталкиваются многие, – тревожность и апатия. Несмотря на кажущуюся противоположность, они часто переплетаются и влияют друг на друга.</p>
 
                         <div class="highlight-box">
+                            <h4>Природа тревоги и апатии</h4>
                             <p>Тревожность – это чувство беспокойства, напряжения и страха, которое может проявляться как физически (учащенное сердцебиение, потливость), так и эмоционально (раздражительность, бессонница). Хроническая тревожность истощает ресурсы организма и приводит к выгоранию. Апатия, напротив, характеризуется отсутствием мотивации, интереса к жизни и эмоциональной реакции. Человек ощущает усталость, потерю энергии и нежелание что-либо делать. Важно понимать, что тревожность и апатия могут существовать одновременно или перетекать одна в другую. Например, человек, постоянно испытывающий тревогу из-за работы, учёбы, может в конечном итоге почувствовать апатию и нежелание ею заниматься.</p>
                         </div>
 
@@ -287,43 +270,40 @@
                             </div>
                         </div>
 
-                        <p>Забота о психологическом здоровье – это постоянный процесс. Помните, что вы не одиноки, и всегда есть способы улучшить свое состояние.</p>
+                        <div class="quote-box">
+                            <p>Забота о психологическом здоровье – это постоянный процесс. Помните, что вы не одиноки, и всегда есть способы улучшить свое состояние.</p>
+                        </div>
+
+                        <h2>Ежедневные практики для преодоления тревоги</h2>
+                        <p>Включите в свою повседневную жизнь практики осознанности (mindfulness). Эти техники помогают сосредоточиться на настоящем моменте, а не беспокоиться о прошлом или будущем. Начните с простого упражнения: посвятите несколько минут в день полному погружению в какое-либо действие – будь то питье чая, прогулка или наблюдение за природой.</p>
+
+                        <div class="highlight-box">
+                            <h4>Сила благодарности</h4>
+                            <p>Введите традицию вести дневник благодарности, записывая каждый день несколько вещей, за которые вы благодарны. Эта практика смещает фокус внимания с негативных мыслей на позитивные аспекты жизни и способствует формированию более оптимистичного мировоззрения.</p>
+                        </div>
+
+                        <p>Помните, что преодоление тревоги и апатии – это процесс, требующий времени и терпения. Будьте добры к себе на этом пути и празднуйте даже маленькие победы. Каждый шаг в направлении психологического благополучия – это инвестиция в ваше общее здоровье и качество жизни.</p>
                     </div>
                 </div>
-
-
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 mb-4 mb-md-0">
-                    <h5>Senifun</h5>
-                    <p>Мы помогаем подросткам разобраться в себе</p>
-                </div>
-                <div class="col-md-4 mb-4 mb-md-0">
-                    <h5>Навигация</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#">Главная</a></li>
-                        <li><a href="#">Игры</a></li>
-                        <li><a href="#">Статьи</a></li>
-                        <li><a href="#">О нас</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h5>Контакты</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#">Email</a></li>
-                        <li><a href="#">Соцсети</a></li>
-                    </ul>
-                </div>
+    <footer style="width: 100%;text-align: center;max-width: inherit; background: rgb(87, 0, 0);">
+        <div class="container py-4 py-lg-5" style="position: relative;padding-left: 6.5%;padding-right: 6.5%;margin: auto;background: #570000;max-width: none;width: 100%;">
+            <hr>
+            <div class="text-muted d-flex flex-column-reverse justify-content-between align-items-center pt-3 ms-0 ps-0" style="height: inherit;">
+                <p class="mb-0 ">Copyright © 2025 Senifun</p><small class="hoverButton" onclick='location.href=&quot;{{ url_for("about") }}&quot;' >О нас</small> <small class="hoverButton" onclick="window.scrollTo(0, 0)"> Back to top</small>
+                <ul class="list-inline mb-0">
+                    <li class="list-inline-item"></li>
+                </ul>
             </div>
-            <hr class="mt-4 mb-3" style="background-color: rgba(255,255,255,0.2);">
-            <p class="text-center mb-0">Copyright © 2025 Senifun</p>
-            <p class="text-center"><a href="#">Back to top</a></p>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bs-init.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bold-and-dark.js') }}"></script>
 </body>
 </html>

@@ -2,6 +2,11 @@
     color: #e8dbd2;
 }
 
+.hoverButtontry {
+    color: white;
+    background: #a89382;
+}
+
 .hoverButtontry:hover {
     background: #946b54;
 }
@@ -11,30 +16,29 @@
     color: #e8dbd2;
 }
 
-.hoverButton2hover{
-
-    color: #3F888F ;
+.hoverButton2 {
+    background: rgb(6, 160, 178);
 }
 
-.hoverButton2:hover{
-
-    color: rgb(6, 160, 178) ;
+.hoverButton2:hover {
+    background: #3F888F ;
 }
 
-.hoverButtontry {
-    color: white;
-    background: #a89382;
-}
 
-.hoverButton1:hover{
+.hoverButton1:hover {
 
     color: #a89382;
 }
 
-.hoverButton1{
+.hoverButton1 {
 
     color: black;
 }
 
+.hoverButton3 {
+    background: #946446;
+}
 
-
+.hoverButton3:hover {
+    background: #694731;
+}
