@@ -14,13 +14,31 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/Simple-Slider.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/buttons.css') }}">
+    <style>
+        @media (max-width: 768px) {
+            #cover h1 {
+                font-size: 40px !important;
+            }
+            #cover p {
+                font-size: 16px !important;
+                margin-right: 15px !important;
+                margin-left: 15px !important;
+            }
+            #cover small {
+                font-size: 14px !important;
+            }
+            #cover {
+                height: 540px !important;
+            }
+        }
+    </style>
 </head>
 
 <body style="background: rgb(87,0,0);">
     <header class="bg-dark" style="background: #654633;--bs-dark: #fcf9f9;--bs-dark-rgb: 255, 253, 242;">
         <nav class="navbar navbar-expand-md sticky-top py-3 navbar-dark" id="mainNav" style="background: #570000;">
             <div class="container">
-                <a class="navbar-brand d-flex align-items-center hoverButton" href="/" onclick='location.href=&quot;{{ url_for("mane") }}&quot;'><span>Senifun</span></a>
+                <a class="navbar-brand d-flex align-items-center hoverButton" href="/" onclick="location.href='{{ url_for("mane") }}'"><span>Senifun</span></a>
                 <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1">
                     <span class="visually-hidden">Toggle navigation</span>
                     <span class="navbar-toggler-icon"></span>
@@ -42,10 +60,10 @@
         </nav>
     </header>
     <div class="text-center" style="background: #fffdf2;">
-        <section id="cover" style="background: url(&quot;{{ url_for('static', filename='img/Снимок экрана 2025-01-25 170350 (1).png') }}&quot;) bottom / cover repeat, linear-gradient(black, rgb(133,133,133) 52%, white), #929292;color: inherit;--bs-body-bg: #f8f7ff;height: 640px;border-color: #570000;" class="ms-0">
+        <section id="cover" style="background: url('{{ url_for('static', filename='img/Снимок экрана 2025-01-25 170350 (1).png') }}') bottom / cover repeat, linear-gradient(black, rgb(133,133,133) 52%, white), #929292;color: inherit;--bs-body-bg: #f8f7ff;height: 640px;border-color: #570000;" class="ms-0">
             <div style="font-size: 14px;"><small class="pt-0" style="width: 30px;font-weight: bold;font-size: 16px;font-family: Inter, sans-serif;">МЫ ПОМОЖЕМ ПОДРОСТКАМ РАЗОБРАТЬСЯ В СЕБЕ</small>
                 <h1 class="text-center mt-3" style="color: #ffffff;font-size: 54px;font-weight: bold;font-family: Inter, sans-serif;">SENIFUN</h1>
-                <p style="font-family: Inter, sans-serif;font-size: 22px;font-weight: bold;margin-right: 30px;margin-left: 30px;">Современные подростки встречаются с разнообразными вызовами и переменами в социуме. Это может содействовать возникновению различных психологических сложностей. Наш проект направлен на психологическую поддержку подростков<br><br></p>
+                <p style="font-family: Inter, sans-serif;font-size: 20px;font-weight: bold;margin-right: 30px;margin-left: 30px;">Современные подростки встречаются с разнообразными вызовами и переменами в социуме. Это может содействовать возникновению различных психологических сложностей. Наш проект направлен на психологическую поддержку подростков<br><br></p>
                 <button class="btn btn-outline-light rounded-circle d-flex align-items-center justify-content-center mx-auto mt-4" style="width: 50px; height: 50px; border-width: 2px; box-shadow: 0 3px 10px rgba(0,0,0,0.2); transition: all 0.3s ease; padding: 0;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.2)'" onmouseout="this.style.backgroundColor='transparent'" onclick="document.querySelector('.container.pt-4.pt-xl-5').scrollIntoView({behavior: 'smooth', block: 'start'})">
                     <i class="fa fa-chevron-down" style="color: white; font-size: 18px;"></i>
                 </button>
@@ -68,7 +86,7 @@
                         <div class="card bg-primary-light">
                             <div class="card-body text-center px-4 py-5 px-md-5" style="background: #ede6d6;border-bottom-left-radius: 20px;border-top-left-radius: 20px;border-top-right-radius: 20px;border-bottom-right-radius: 20px;--bs-primary: #ffffff;--bs-primary-rgb: 255,255,255;--bs-info: #ffffff;--bs-info-rgb: 255,255,255;border-style: none;border-color: var(--bs-body-color);backdrop-filter: blur(100px) brightness(200%) grayscale(100%) hue-rotate(360deg) saturate(0%);-webkit-backdrop-filter: blur(100px) brightness(200%) grayscale(100%) hue-rotate(360deg) saturate(0%);">
                                 <h5 class="fw-bold card-title mb-3" style="color: rgb(0,0,0);font-weight: bold;font-family: Inter, sans-serif;">Стресс из-за учебы</h5>
-                                <p class="fw-bold text-primary card-text mb-2" style="text-align: center;color: #ede6d6;border-color: #a89382;font-family: Inter, sans-serif;"><span style="color: rgb(168, 147, 130);">Игра предлагает погрузиться в историю, где главный герой сталкивается с различными препятствиями, связанными с учебой</span></p><button class="btn btn-primary btn-sm hoverButtontry" type="button" style="--bs-primary: #a89382;--bs-primary-rgb: 255,255,255;border-style: none;" onclick='location.href=&quot;{{ url_for("history") }}&quot;'>Перейти</button>
+                                <p class="fw-bold text-primary card-text mb-2" style="text-align: center;color: #ede6d6;border-color: #a89382;font-family: Inter, sans-serif;"><span style="color: rgb(168, 147, 130);">Игра предлагает погрузиться в историю, где главный герой сталкивается с различными препятствиями, связанными с учебой</span></p><button class="btn btn-primary btn-sm hoverButtontry" type="button" style="--bs-primary: #a89382;--bs-primary-rgb: 255,255,255;border-style: none;" onclick="location.href='{{ url_for("history") }}'">Перейти</button>
                             </div>
                         </div>
                     </div>
@@ -88,7 +106,7 @@
                 <div class="col-md-6 text-center text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center">
                     <div style="max-width: 350px;">
                         <h2 class="text-uppercase fw-bold" style="color: rgb(14,14,14);">Полезные статьи</h2>
-                        <p class="my-3" style="color: rgb(23,22,22);font-weight: bold;">Сборник матриалов с советами</p><button class="btn btn-info btn-sm" onclick='location.href=&quot;{{ url_for("advice") }}&quot;' style="width: 200px; height: 50px; font-size: 1.2em" type="button">Перейти</button>
+                        <p class="my-3" style="color: rgb(23,22,22);font-weight: bold;">Сборник матриалов с советами</p><button class="btn btn-info btn-sm" onclick="location.href='{{ url_for("advice") }}'" style="width: 200px; height: 50px; font-size: 1.2em" type="button">Перейти</button>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -101,7 +119,9 @@
         <div class="container py-4 py-lg-5" style="position: relative;padding-left: 6.5%;padding-right: 6.5%;margin: auto;background: #570000;max-width: none;width: 100%;">
             <hr>
             <div class="text-muted d-flex flex-column-reverse justify-content-between align-items-center pt-3 ms-0 ps-0" style="height: inherit;">
-                <p class="mb-0 ">Copyright © 2025 Senifun</p><small class="hoverButton" onclick='location.href=&quot;{{ url_for("about") }}&quot;' >О нас</small> <small class="hoverButton" onclick="window.scrollTo(0, 0)"> Back to top</small>
+                <p class="mb-0 ">Copyright © 2025 Senifun</p>
+                <small class="hoverButton" onclick="location.href='{{ url_for("about") }}'">О нас</small>
+                <small class="hoverButton" onclick="window.scrollTo(0, 0)">Back to top</small>
                 <ul class="list-inline mb-0">
                     <li class="list-inline-item"></li>
                 </ul>
