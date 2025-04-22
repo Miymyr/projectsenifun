@@ -268,6 +268,32 @@ def h16():
 def h17():
     return render_template("h17.html")
 
+@app.route('/h18')
+def h18():
+    return render_template("h18.html")
+
+@app.route('/h19')
+def h19():
+    return render_template("h19.html")
+
+@app.route('/h20')
+def h20():
+    return render_template("h20.html")
+
+@app.route('/h21')
+def h21():
+    return render_template("h21.html")
+
+@app.route('/h22')
+def h22():
+    return render_template("h22.html")
+
+@app.route('/h23')
+def h23():
+    return render_template("h23.html")
+
+
+
 
 
 
