@@ -162,7 +162,6 @@
         document.addEventListener('DOMContentLoaded', function() {
             const fadeElements = document.querySelectorAll('.fade-in-up');
 
-            // Предзагрузка изображений для устранения резких появлений
             const imageUrls = [];
             document.querySelectorAll('.article-img').forEach(img => {
                 if (img.src) imageUrls.push(img.src);
@@ -175,15 +174,12 @@
                 document.body.appendChild(img);
             });
 
-            // Оптимизированная функция проверки видимости
             function isElementInViewport(el) {
                 const rect = el.getBoundingClientRect();
                 const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-                // Расширяем область видимости для лучшего UX
                 return rect.top <= windowHeight + 100 && rect.bottom >= -100;
             }
 
-            // Функция для анимации видимых элементов
             function animateVisibleElements() {
                 fadeElements.forEach(element => {
                     if (isElementInViewport(element) && !element.classList.contains('visible')) {
@@ -195,17 +191,13 @@
                 });
             }
 
-            // Используем throttle для событий прокрутки
             const throttledAnimateVisibleElements = throttle(animateVisibleElements, 100);
 
-            // Оптимизированные обработчики событий
             window.addEventListener('scroll', throttledAnimateVisibleElements, { passive: true });
             window.addEventListener('resize', throttledAnimateVisibleElements, { passive: true });
 
-            // Запускаем первую анимацию после небольшой задержки
             setTimeout(animateVisibleElements, 100);
 
-            // Удаляем предзагруженные изображения через время
             setTimeout(() => {
                 document.querySelectorAll('.preload-img').forEach(img => img.remove());
             }, 3000);

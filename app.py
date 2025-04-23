@@ -33,6 +33,7 @@ def advice2():
 def advice3():
     return render_template("советы-1-2.html")
 
+
 @app.route('/advice/4')
 def advice4():
     return render_template("советы 4.html")
@@ -192,112 +193,130 @@ def history945():
 def history10():
     return render_template("untitled-10-1.html")
 
+
 @app.route('/h')
 def h():
     return render_template("h.html")
+
 
 @app.route('/h0')
 def h0():
     return render_template("h0.html")
 
+
 @app.route('/h1')
 def h1():
     return render_template("h1.html")
+
 
 @app.route('/h2')
 def h2():
     return render_template("h2.html")
 
+
 @app.route('/h3')
 def h3():
     return render_template("h3.html")
+
 
 @app.route('/h4')
 def h4():
     return render_template("h4.html")
 
+
 @app.route('/h5')
 def h5():
     return render_template("h5.html")
+
 
 @app.route('/h6')
 def h6():
     return render_template("h6.html")
 
+
 @app.route('/h7')
 def h7():
     return render_template("h7.html")
+
 
 @app.route('/h8')
 def h8():
     return render_template("h8.html")
 
+
 @app.route('/h9')
 def h9():
     return render_template("h9.html")
+
 
 @app.route('/h10')
 def h10():
     return render_template("h10.html")
 
+
 @app.route('/h11')
 def h11():
     return render_template("h11.html")
+
 
 @app.route('/h12')
 def h12():
     return render_template("h12.html")
 
+
 @app.route('/h13')
 def h13():
     return render_template("h13.html")
+
 
 @app.route('/h14')
 def h14():
     return render_template("h14.html")
 
+
 @app.route('/h15')
 def h15():
     return render_template("h15.html")
+
 
 @app.route('/h16')
 def h16():
     return render_template("h16.html")
 
+
 @app.route('/h17')
 def h17():
     return render_template("h17.html")
+
 
 @app.route('/h18')
 def h18():
     return render_template("h18.html")
 
+
 @app.route('/h19')
 def h19():
     return render_template("h19.html")
+
 
 @app.route('/h20')
 def h20():
     return render_template("h20.html")
 
+
 @app.route('/h21')
 def h21():
     return render_template("h21.html")
+
 
 @app.route('/h22')
 def h22():
     return render_template("h22.html")
 
+
 @app.route('/h23')
 def h23():
     return render_template("h23.html")
-
-
-
-
-
-
-
 
 
 @app.route('/favicon.ico')
