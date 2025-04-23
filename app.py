@@ -319,6 +319,61 @@ def h23():
     return render_template("h23.html")
 
 
+@app.route('/h24')
+def h24():
+    return render_template("h24.html")
+
+
+@app.route('/h25')
+def h25():
+    return render_template("h25.html")
+
+
+@app.route('/h26')
+def h26():
+    return render_template("h26.html")
+
+
+@app.route('/h27')
+def h27():
+    return render_template("h27.html")
+
+
+@app.route('/h28')
+def h28():
+    return render_template("h28.html")
+
+
+@app.route('/h29')
+def h29():
+    return render_template("h29.html")
+
+
+@app.route('/h30')
+def h30():
+    return render_template("h30.html")
+
+
+@app.route('/h31')
+def h31():
+    return render_template("h31.html")
+
+
+@app.route('/h32')
+def h32():
+    return render_template("h32.html")
+
+
+@app.route('/h33')
+def h33():
+    return render_template("h33.html")
+
+
+@app.route('/h34')
+def h34():
+    return render_template("h34.html")
+
+
 @app.route('/favicon.ico')
 def favicon():
     return send_from_directory(os.path.join(app.root_path, 'static'),
